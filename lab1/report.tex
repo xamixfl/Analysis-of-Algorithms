@@ -95,7 +95,7 @@
 \vspace{2.2cm}
 \noindent\textbf{Тема} \underline{Сравнительный анализ ресурсной эффективности алгоритмов}\\[1em]
 \noindent\textbf{Студент} \underline{Понарин А.~А.}\\[1em]
-\noindent\textbf{Группа} \underline{ИУ7-555}\\[1em]
+\noindent\textbf{Группа} \underline{ИУ7-55Б}\\[1em]
 \noindent\textbf{Преподаватели} \underline{Волкова Л.~Л., Строганов Д.~В.}
 \vfill
 \begin{center}Москва, 2026\end{center}
@@ -416,8 +416,8 @@ int binarySearchRecursive(const std::vector<int>& arr, int target, long long& co
 \begin{table}[H]\centering
 \caption{Модульные тесты алгоритма полного перебора}\label{tab:tests1}
 \small
-\begin{tabularx}{\textwidth}{|X|X|c|c|}\hline
-Сценарий & Входные данные & Эталонный результат & Полученный результат\\\hline
+\begin{tabularx}{\textwidth}{|>{\hsize=0.8\hsize}X|>{\hsize=1.2\hsize}X|>{\hsize=0.5\hsize}X|>{\hsize=0.5\hsize}X|}\hline
+\bfseries Сценарий & \bfseries Входные данные & \bfseries Эталонный результат & \bfseries Полученный результат\\\hline
 Искомый элемент находится на первой позиции последовательности & $A=\{9,8,7,6,5\}$, $T=9$ & 0 & 0\\\hline
 Искомого элемента нет & $A=\{9,8,7,6,5\}$, $T=1$ & $-1$ & $-1$\\\hline
 Искомый элемент находится на последней позиции последовательности & $A=\{9,8,7,6,5\}$, $T=5$ & 4 & 4\\\hline
@@ -432,8 +432,8 @@ int binarySearchRecursive(const std::vector<int>& arr, int target, long long& co
 \begin{table}[H]\centering
 \caption{Модульные тесты алгоритмов бинарного поиска}\label{tab:tests2}
 \small
-\begin{tabularx}{\textwidth}{|X|X|c|c|}\hline
-Сценарий & Входные данные & Эталонный результат & Полученный результат\\\hline
+\begin{tabularx}{\textwidth}{|>{\hsize=0.8\hsize}X|>{\hsize=1.2\hsize}X|>{\hsize=0.5\hsize}X|>{\hsize=0.5\hsize}X|}\hline
+\bfseries Сценарий & \bfseries Входные данные & \bfseries Эталонный\newline результат & \bfseries Полученный\newline результат\\\hline
 Искомый элемент находится в середине последовательности нечётной длины & $A=\{0,1,2,3,4,5,6,7,8\}$, $T=4$ & 4 & 4\\\hline
 Искомый элемент находится на первой позиции последовательности нечётной длины & $A=\{0,1,2,3,4,5,6,7,8\}$, $T=0$ & 0 & 0\\\hline
 Искомый элемент находится на последней позиции последовательности нечётной длины & $A=\{0,1,2,3,4,5,6,7,8\}$, $T=8$ & 8 & 8\\\hline
@@ -448,8 +448,8 @@ int binarySearchRecursive(const std::vector<int>& arr, int target, long long& co
 \begin{table}[H]\centering
 \caption{Модульные тесты алгоритмов бинарного поиска, часть 2}\label{tab:tests3}
 \small
-\begin{tabularx}{\textwidth}{|X|X|c|c|}\hline
-Сценарий & Входные данные & Эталонный результат & Полученный результат\\\hline
+\begin{tabularx}{\textwidth}{|>{\hsize=0.8\hsize}X|>{\hsize=1.2\hsize}X|>{\hsize=0.5\hsize}X|>{\hsize=0.5\hsize}X|}\hline
+\bfseries Сценарий & \bfseries Входные данные & \bfseries Эталонный результат & \bfseries Полученный результат\\\hline
 Пустая последовательность & $A=\{\}$, $T=0$ & $-1$ & $-1$\\\hline
 Единственный элемент последовательности совпадает с искомым значением & $A=\{0\}$, $T=0$ & 0 & 0\\\hline
 Единственный элемент последовательности не совпадает с искомым значением & $A=\{0\}$, $T=-1$ & $-1$ & $-1$\\\hline
