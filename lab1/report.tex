@@ -23,9 +23,10 @@
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
+\usepackage{multirow}
 \hypersetup{unicode=true,colorlinks=false,pdfborder={0 0 1},linkbordercolor={1 0 0}}
 \urlstyle{same}
-\captionsetup{labelsep=endash,font=small}
+\captionsetup{labelsep=endash,font=normalsize}
 \captionsetup[figure]{name=Рисунок}
 \captionsetup[table]{name=Таблица}
 \captionsetup[table]{justification=raggedright,singlelinecheck=false,margin=0pt}
@@ -488,8 +489,15 @@ int binarySearchRecursive(const std::vector<int>& arr, int target, long long& co
 \begin{table}[H]\centering
 \caption{Результаты сравнительного анализа алгоритмов}\label{tab:compare}
 \small
-\begin{tabularx}{\textwidth}{|X|c|c|p{4.5cm}|c|}\hline
-\bfseries Алгоритм & \bfseries Л.с. & \bfseries Х.с. & \bfseries Требования к алгоритму & \bfseries Память\\\hline
+\begin{tabularx}{\textwidth}{|p{3.5cm}|p{1.8cm}|p{1.8cm}|p{3.9cm}|p{3.3cm}|}\hline
+\multirow{2}{*}{\parbox{3.5cm}{\bfseries Алгоритм}}
+  & \multicolumn{2}{c|}{\parbox{3cm}{\centering\bfseries Оценка вычислительной сложности алгоритмов как функции от числа сравнений}}
+  & \multirow{2}{*}{\parbox{4.5cm}{\bfseries Требования к\\ алгоритму}}
+  & \multirow{2}{*}{\parbox{3.3cm}{\centering\bfseries Оценка\\ затрачиваемой\\ памяти}}\\\cline{2-3}
+\multirow{2}{*}{\parbox{3.5cm}{~}}
+  & \bfseries Л.с. & \bfseries Х.с.
+  & \multirow{2}{*}{\parbox{4.5cm}{~}}
+  & \multirow{2}{*}{\parbox{3.3cm}{~}}\\\hline
 Полный перебор & $O(1)$ & $O(n)$ & --- & $O(1)$\\\hline
 Итеративный бинарный поиск №1 & $O(1)$ & $O(\log n)$ & Последовательность должна быть отсортирована & $O(1)$\\\hline
 Итеративный бинарный поиск №2 & $O(\log n)$ & $O(\log n)$ & Последовательность должна быть отсортирована & $O(1)$\\\hline
