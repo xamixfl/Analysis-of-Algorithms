@@ -1,0 +1,530 @@
+\documentclass[14pt,a4paper]{extarticle}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setmonofont{Consolas}
+\newfontfamily\cyrillicfonttt{Courier New}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\usepackage[left=30mm,right=15mm,top=20mm,bottom=20mm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\usepackage{amsmath,amssymb,array,tabularx,longtable}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,shapes.geometric,positioning}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{unicode=true,colorlinks=false,pdfborder={0 0 1},linkbordercolor={1 0 0}}
+\urlstyle{same}
+\captionsetup{labelsep=endash,font=small}
+\captionsetup[figure]{name=Рисунок}
+\captionsetup[table]{name=Таблица}
+\captionsetup[table]{justification=raggedright,singlelinecheck=false,margin=0pt}
+\captionsetup[lstlisting]{justification=raggedright,singlelinecheck=false,margin=5pt}
+\renewcommand{\lstlistingname}{Листинг}
+\renewcommand{\contentsname}{СОДЕРЖАНИЕ}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries\large}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\titleformat{\section}{\bfseries\large}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{1.25cm}{0pt}{1em}
+\titlespacing*{\subsection}{1.25cm}{1em}{0.6em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{17pt}
+\lstdefinestyle{gocode}{
+  language=C++,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\mdseries,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  framerule=0.3pt,
+  xleftmargin=3mm,
+  xrightmargin=3mm,
+  aboveskip=0.6em,
+  belowskip=0.6em
+}
+\lstset{style=gocode}
+\tikzset{
+  flow/.style={-{Stealth[length=2mm]},thick},
+  term/.style={draw,ellipse,align=center,minimum width=28mm,minimum height=8mm},
+  proc/.style={draw,rectangle,align=center,minimum width=38mm,minimum height=9mm},
+  dec/.style={draw,diamond,aspect=2.3,align=center,inner sep=1pt,minimum width=34mm},
+  lbl/.style={font=\small,fill=white,inner sep=1pt}
+}
+\newcommand{\structhead}[1]{\clearpage\phantomsection\addcontentsline{toc}{section}{#1}\begin{center}\bfseries #1\end{center}\vspace{0.5em}}
+\newcommand{\conclusion}[1]{\par\medskip\noindent\hspace*{\parindent}\textbf{Вывод}\par\indent #1\par}
+
+\begin{document}
+\begin{titlepage}
+\thispagestyle{empty}
+\noindent\begin{minipage}[c]{0.16\textwidth}
+\includegraphics[width=\linewidth]{b_logo.jpg}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.82\textwidth}\centering\small\bfseries
+Министерство науки и высшего образования Российской Федерации\\
+Федеральное государственное автономное образовательное учреждение\\
+высшего образования\\
+«Московский государственный технический университет имени Н.~Э.~Баумана\\
+(национальный исследовательский университет)»\\
+(МГТУ им. Н.~Э.~Баумана)
+\end{minipage}
+\par\vspace{0.5em}\noindent\rule{\textwidth}{2pt}\par\vspace{1.5em}
+\noindent ФАКУЛЬТЕТ \underline{«Информатика и системы управления»}\\[1em]
+{\small\noindent КАФЕДРА \underline{«Программная инженерия»}}
+\vspace{2.2cm}
+\begin{center}
+\bfseries\Large Лабораторная работа № 1\\[0.3em]
+по дисциплине «Анализ алгоритмов»
+\end{center}
+\vspace{2.2cm}
+\noindent\textbf{Тема} \underline{Сравнительный анализ ресурсной эффективности алгоритмов}\\[1em]
+\noindent\textbf{Студент} \underline{Понарин А.~А.}\\[1em]
+\noindent\textbf{Группа} \underline{ИУ7-555}\\[1em]
+\noindent\textbf{Преподаватели} \underline{Волкова Л.~Л., Строганов Д.~В.}
+\vfill
+\begin{center}Москва, 2026\end{center}
+\end{titlepage}
+
+\setcounter{page}{2}
+\renewcommand{\contentsname}{СОДЕРЖАНИЕ}
+\tableofcontents
+
+\structhead{ВВЕДЕНИЕ}
+\noindent\hspace*{\parindent}Цель работы — выполнение сравнительного анализа ресурсной эффективности алгоритмов поиска заданного элемента в массиве чисел.
+
+\noindent Задачи:
+\begin{enumerate}
+\item описать решаемую согласно варианту задачу;
+\item разработать рекурсивный и нерекурсивные алгоритмы решения задачи;
+\item описать разработанные алгоритмы схемами алгоритмов;
+\item описать требования к программному обеспечению;
+\item описать средства реализации алгоритмов;
+\item реализовать разработанные алгоритмы;
+\item выполнить тестирование реализации алгоритмов;
+\item выполнить теоретическую оценку затрачиваемой реализацией каждого алгоритма памяти;
+\item оценить временную эффективность алгоритмов или их реализаций в лучшем и худшем случае в терминах числа сравнений искомой величины с другими величинами;
+\item представить результаты сравнительного анализа в формате таблицы;
+\item сделать выводы из сравнительного анализа реализации разработанных алгоритмов решения одной и той же задачи, по критериям временной и ёмкостной эффективности, а также дополнительных требований, налагаемых алгоритмом.
+\end{enumerate}
+
+\clearpage\section{Аналитическая часть}
+\label{sec:analysis}
+Постановка задачи: дана последовательность целых чисел $a=(a_0,a_1,\ldots,a_n)$, где $n$ — длина последовательности, и искомое значение $T$. Требуется найти такой индекс $i$ последовательности чисел $a$, что $a_i = T$.
+
+\subsection{Метод полного перебора (Линейный поиск)}
+Алгоритм последовательного перебора выполняет один линейный проход по элементам несортированной последовательности:
+\begin{itemize}
+\item инициализировать счётчик $i \leftarrow 0$;
+\item для каждого элемента $a_i$:
+  \begin{itemize}
+  \item если $a_i = T$, вернуть $i$;
+  \item выполнить $i \leftarrow i + 1$;
+  \end{itemize}
+\item вернуть $-1$.
+\end{itemize}
+Алгоритм оперирует базовыми операциями индексации и проверкой равенства значений.
+
+\subsection{Рекурсивный бинарный поиск}
+Алгоритм. Рекурсивная функция поиска принимает на вход отсортированную по возрастанию последовательность чисел $A$, искомое значение $T$, а также левую ($l$) и правую ($r$) границы поиска:
+\begin{itemize}
+\item если $l > r$, вернуть $-1$;
+\item иначе:
+  \begin{itemize}
+  \item инициализировать $m \leftarrow \lfloor\frac{l+r}{2}\rfloor$;
+  \item если $T = a_m$, вернуть $m$;
+  \item иначе если $T < a_m$, выполнить рекурсивный поиск для левой половины (вызвать функцию с границами $l, m-1$);
+  \item иначе выполнить рекурсивный поиск для правой половины (вызвать функцию с границами $m+1, r$).
+  \end{itemize}
+\end{itemize}
+
+\subsection{Итеративный бинарный поиск №1 (с двумя сравнениями)}
+Классический итеративный подход сравнивает ключ $T$ со средним элементом $a_m$ отсортированного массива на каждой итерации. Если они равны, поиск завершается, в противном случае область сужается влево или вправо:
+\begin{itemize}
+\item инициализировать $l \leftarrow 0$, $r \leftarrow n-1$;
+\item пока $l \le r$:
+  \begin{itemize}
+  \item инициализировать $m \leftarrow \lfloor\frac{l+r}{2}\rfloor$;
+  \item если $T = a_m$, вернуть $m$;
+  \item иначе если $T < a_m$, выполнить $r \leftarrow m-1$;
+  \item иначе выполнить $l \leftarrow m+1$;
+  \end{itemize}
+\item вернуть $-1$.
+\end{itemize}
+
+\subsection{Итеративный бинарный поиск №2 (с одним сравнением)}
+Альтернативный итеративный алгоритм откладывает проверку на точное равенство до завершения основного цикла сужения диапазона:
+\begin{itemize}
+\item инициализировать $l \leftarrow 0$, $r \leftarrow n-1$;
+\item пока $l < r$:
+  \begin{itemize}
+  \item инициализировать $m \leftarrow l + \lfloor\frac{r-l}{2}\rfloor$;
+  \item если $a_m > T$, выполнить $r \leftarrow m-1$;
+  \item иначе выполнить $l \leftarrow m$;
+  \end{itemize}
+\item если $l \le r$ и $a_l = T$, вернуть $l$;
+\item вернуть $-1$.
+\end{itemize}
+
+\conclusion{Описана задача поиска элемента в последовательности чисел, разработаны 4 алгоритма (линейный, рекурсивный и два итеративных бинарных поиска) для решения поставленной задачи.}
+
+\clearpage\section{Конструкторская часть}
+\label{sec:design}
+В разделе рассматриваются рекурсивный и нерекурсивные алгоритмы решения задачи, разработанные алгоритмы описываются схемами алгоритмов, также приводятся требования к программному обеспечению.
+
+\subsection{Схема алгоритма полного перебора}
+На рисунке~\ref{fig:linear} показан алгоритм полного перебора.
+\begin{figure}[H]\centering
+\resizebox{0.78\textwidth}{!}{%
+\begin{tikzpicture}[node distance=10mm]
+\node[term] (s) {Начало};
+\node[proc,below=of s] (init) {result := -1};
+\node[dec,below=of init] (bound) {Цикл по $i$ от 0 до $n-1$};
+\node[dec,below=of bound] (eq) {$a_i$ равно target?};
+\node[proc,below=of eq] (inc) {$i := i + 1$};
+\node[term,right=42mm of bound] (miss) {Вернуть result};
+\node[term,right=42mm of eq] (hit) {result := $i$};
+\draw[flow] (s)--(init); \draw[flow] (init)--(bound);
+\draw[flow] (bound)--node[lbl,left]{да}(eq);
+\draw[flow] (bound)--node[lbl,above]{нет}(miss);
+\draw[flow] (eq)--node[lbl,above]{да}(hit);
+\draw[flow] (eq)--node[lbl,left]{нет}(inc);
+\draw[flow] (inc.west)--++(-20mm,0)|-(bound.west);
+\end{tikzpicture}}
+\caption{Алгоритм полного перебора}\label{fig:linear}
+\end{figure}
+
+\subsection{Схема алгоритма бинарного поиска с двумя сравнениями}
+На рисунке~\ref{fig:binary-two} алгоритм бинарного поиска с двумя сравнениями.
+\begin{figure}[H]\centering
+\resizebox{0.88\textwidth}{!}{%
+\begin{tikzpicture}[node distance=9mm]
+\node[term] (s) {Начало};
+\node[proc,below=of s] (init) {$l:=0,\ r:=n-1$};
+\node[dec,below=of init] (bound) {Пока $l$ меньше или равно $r$};
+\node[proc,below=of bound] (mid) {$m:=(l+r)/2$};
+\node[dec,below=of mid] (eq) {target равно $a[m]$?};
+\node[dec,below=of eq] (lt) {target меньше $a[m]$?};
+\node[proc,below left=11mm and 28mm of lt] (left) {$l:=m+1$};
+\node[proc,below right=11mm and 28mm of lt] (right) {$r:=m-1$};
+\node[term,right=42mm of bound] (miss) {Вернуть $-1$};
+\node[term,right=42mm of eq] (hit) {Вернуть $m$};
+\draw[flow] (s)--(init); \draw[flow] (init)--(bound);
+\draw[flow] (bound)--node[lbl,left]{да}(mid);
+\draw[flow] (bound)--node[lbl,above]{нет}(miss);
+\draw[flow] (mid)--(eq);
+\draw[flow] (eq)--node[lbl,above]{да}(hit);
+\draw[flow] (eq)--node[lbl,left]{нет}(lt);
+\draw[flow] (lt)--node[lbl,above left]{да}(left);
+\draw[flow] (lt)--node[lbl,above right]{нет}(right);
+\draw[flow] (left.west)--++(-13mm,0)|-(bound.west);
+\draw[flow] (right.south)--++(0,-14mm)-|([xshift=-60mm]bound.west)--(bound.west);
+\end{tikzpicture}}
+\caption{Алгоритм бинарного поиска с двумя сравнениями}\label{fig:binary-two}
+\end{figure}
+
+\subsection{Схема алгоритма бинарного поиска с одним сравнением}
+На рисунке~\ref{fig:binary-one} алгоритм бинарного поиска с одним сравнением.
+\begin{figure}[H]\centering
+\resizebox{0.87\textwidth}{!}{%
+\begin{tikzpicture}[node distance=9mm]
+\node[term] (s) {Начало};
+\node[proc,below=of s] (init) {$l:=0,\ r:=n-1$};
+\node[dec,below=of init] (bound) {Пока $l$ меньше $r$};
+\node[proc,below=of bound] (mid) {$m:=l+(r-l+1)/2$};
+\node[dec,below=of mid] (lt) {$a[m]$ больше target?};
+\node[proc,below left=12mm and 26mm of lt] (left) {$l:=m$};
+\node[proc,below right=12mm and 26mm of lt] (right) {$r:=m-1$};
+\node[dec,right=55mm of bound] (last) {$l$ равно $r$ и $a[l]$ равно target?};
+\node[term,above=12mm of last] (hit) {Вернуть $l$};
+\node[term,below=12mm of last] (miss) {Вернуть $-1$};
+\draw[flow] (s)--(init); \draw[flow] (init)--(bound);
+\draw[flow] (bound)--node[lbl,left]{да}(mid);
+\draw[flow] (bound)--node[lbl,above]{нет}(last);
+\draw[flow] (mid)--(lt);
+\draw[flow] (lt)--node[lbl,above left]{да}(left);
+\draw[flow] (lt)--node[lbl,above right]{нет}(right);
+\draw[flow] (left.west)--++(-13mm,0)|-(bound.west);
+\draw[flow] (right.south)--++(0,-14mm)-|([xshift=-60mm]bound.west)--(bound.west);
+\draw[flow] (last)--node[lbl,right]{да}(hit);
+\draw[flow] (last)--node[lbl,right]{нет}(miss);
+\end{tikzpicture}}
+\caption{Алгоритм бинарного поиска с одним сравнением}\label{fig:binary-one}
+\end{figure}
+
+\subsection{Схема алгоритма рекурсивного бинарного поиска}
+На рисунке~\ref{fig:binary-rec} алгоритм рекурсивного бинарного поиска.
+\begin{figure}[H]\centering
+\resizebox{0.90\textwidth}{!}{%
+\begin{tikzpicture}[node distance=9mm]
+\node[term] (s) {Вызов recursive()};
+\node[dec,below=of s] (empty) {$l$ больше $r$?};
+\node[proc,below=of empty] (mid) {$m:=(l+r)/2$};
+\node[dec,below=of mid] (eq) {target равно $a[m]$?};
+\node[dec,below=of eq] (lt) {target меньше $a[m]$?};
+\node[proc,below left=12mm and 25mm of lt] (left) {Вернуть recursive(target, $m+1, r$)};
+\node[proc,below right=12mm and 25mm of lt] (right) {Вернуть recursive(target, $l, m-1$)};
+\node[term,right=50mm of empty] (miss) {Вернуть $-1$};
+\node[term,right=50mm of eq] (hit) {Вернуть $m$};
+\draw[flow] (s)--(empty);
+\draw[flow] (empty)--node[lbl,left]{нет}(mid);
+\draw[flow] (empty)--node[lbl,above]{да}(miss);
+\draw[flow] (mid)--(eq);
+\draw[flow] (eq)--node[lbl,above]{да}(hit);
+\draw[flow] (eq)--node[lbl,left]{нет}(lt);
+\draw[flow] (lt)--node[lbl,above left]{да}(left);
+\draw[flow] (lt)--node[lbl,above right]{нет}(right);
+\end{tikzpicture}}
+\caption{Алгоритм рекурсивного бинарного поиска}\label{fig:binary-rec}
+\end{figure}
+
+\subsection{Требования к программному обеспечению}
+К программному обеспечению предъявляются следующие требования:
+\begin{enumerate}
+\item выбранный язык программирования имеет статическую типизацию (C++);
+\item при входе пользователь вводит $n$ — длину последовательности чисел;
+\item формируется последовательность чисел из случайных элементов с возможностью пересоздания;
+\item создаётся и сортируется копия последовательности чисел;
+\item циклически выводится интерактивное меню, посредством которого пользователь может ввести искомое значение и выбрать конкретный алгоритм поиска, а также замерить время и число сравнений.
+\end{enumerate}
+
+\conclusion{Разработаны рекурсивный и нерекурсивные алгоритмы решения задачи, алгоритмы структурированы для описания схемами, сформулированы четкие требования к программному обеспечению.}
+
+\clearpage\section{Технологическая часть}
+\label{sec:tech}
+В разделе описываются средства реализации алгоритмов, реализовываются разработанные алгоритмы и выполняется тестирование реализации алгоритмов.
+
+\subsection{Средства реализации}
+Программные реализации алгоритмов выполнены на языке C++. Используемая среда разработки Visual Studio Code. Для точного замера времени использовалась библиотека \texttt{<chrono>}, а для генерации данных \texttt{<random>}.
+
+\subsection{Реализация алгоритмов}
+В листингах 3.1--3.4 приведены модифицированные реализации алгоритмов поиска элемента в последовательности чисел, которые помимо необходимых для вычисления ответа параметров принимают указатель на переменную \texttt{comparison\_count}, необходимую для подсчёта количества сравнений.
+
+\noindent\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Реализация алгоритма полного перебора},label={lst:linear}]
+int linearSearch(const std::vector<int>& arr, int target, long long& comparisonCount) {
+    comparisonCount = 0;
+    for (size_t i = 0; i < arr.size(); ++i) {
+        comparisonCount++;
+        if (arr[i] == target) {
+            return static_cast<int>(i);
+        }
+    }
+    return -1;
+}
+\end{lstlisting}
+\end{minipage}
+
+\medskip
+\noindent\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Реализация нерекурсивного алгоритма бинарного поиска с двумя сравнениями},label={lst:two}]
+int binarySearchIterativeTwoCmp(const std::vector<int>& arr, int target, long long& comparisonCount) {
+    comparisonCount = 0;
+    int left = 0;
+    int right = static_cast<int>(arr.size()) - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        comparisonCount++;
+        if (arr[mid] == target) {
+            return mid;
+        }
+        comparisonCount++;
+        if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
+\end{lstlisting}
+\end{minipage}
+
+\clearpage
+\noindent\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Реализация алгоритма нерекурсивного алгоритма бинарного поиска с одним сравнением},label={lst:one}]
+int binarySearchIterativeOneCmp(const std::vector<int>& arr, int target, long long& comparisonCount) {
+    comparisonCount = 0;
+    int left = 0;
+    int right = static_cast<int>(arr.size()) - 1;
+    while (left < right) {
+        int mid = left + (right - left + 1) / 2;
+        comparisonCount++;
+        if (arr[mid] > target) {
+            right = mid - 1;
+        } else {
+            left = mid;
+        }
+    }
+    if (left <= right && !arr.empty()) {
+        comparisonCount++;
+        if (arr[left] == target) {
+            return left;
+        }
+    }
+    return -1;
+}
+\end{lstlisting}
+\end{minipage}
+
+\medskip
+\noindent\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Реализация рекурсивного алгоритма бинарного поиска},label={lst:recursive}]
+int binarySearchRecursiveHelper(const std::vector<int>& arr, int target, int left, int right, long long& comparisonCount) {
+    if (left > right) {
+        return -1;
+    }
+    int mid = left + (right - left) / 2;
+    comparisonCount++;
+    if (arr[mid] == target) {
+        return mid;
+    }
+    comparisonCount++;
+    if (arr[mid] < target) {
+        return binarySearchRecursiveHelper(arr, target, mid + 1, right, comparisonCount);
+    } else {
+        return binarySearchRecursiveHelper(arr, target, left, mid - 1, comparisonCount);
+    }
+}
+
+int binarySearchRecursive(const std::vector<int>& arr, int target, long long& comparisonCount) {
+    comparisonCount = 0;
+    return binarySearchRecursiveHelper(arr, target, 0, static_cast<int>(arr.size()) - 1, comparisonCount);
+}
+\end{lstlisting}
+\end{minipage}
+
+\clearpage\section{Модульное тестирование}
+\label{sec:testing}
+Для проверки корректности работы программы проведено модульное тестирование. Результаты представлены в таблицах 3.1--3.3.
+
+\begin{table}[H]\centering
+\caption{Модульные тесты алгоритма полного перебора}\label{tab:tests1}
+\small
+\begin{tabularx}{\textwidth}{|X|X|c|c|}\hline
+Сценарий & Входные данные & Эталонный результат & Полученный результат\\\hline
+Искомый элемент находится на первой позиции последовательности & $A=\{9,8,7,6,5\}$, $T=9$ & 0 & 0\\\hline
+Искомого элемента нет & $A=\{9,8,7,6,5\}$, $T=1$ & $-1$ & $-1$\\\hline
+Искомый элемент находится на последней позиции последовательности & $A=\{9,8,7,6,5\}$, $T=5$ & 4 & 4\\\hline
+Пустая последовательность & $A=\{\}$, $T=5$ & $-1$ & $-1$\\\hline
+Единственный элемент последовательности совпадает с искомым значением & $A=\{0\}$, $T=0$ & 0 & 0\\\hline
+Единственный элемент последовательности не совпадает с искомым значением & $A=\{0\}$, $T=3$ & $-1$ & $-1$\\\hline
+\end{tabularx}
+\end{table}
+
+Все реализованные алгоритмы бинарного поиска имеют одинаковые сценарии тестирования. В таблице не указаны названия алгоритмов, так как в результате тестирования полученные результаты всех алгоритмов бинарного поиска совпали.
+
+\begin{table}[H]\centering
+\caption{Модульные тесты алгоритмов бинарного поиска}\label{tab:tests2}
+\small
+\begin{tabularx}{\textwidth}{|X|X|c|c|}\hline
+Сценарий & Входные данные & Эталонный результат & Полученный результат\\\hline
+Искомый элемент находится в середине последовательности нечётной длины & $A=\{0,1,2,3,4,5,6,7,8\}$, $T=4$ & 4 & 4\\\hline
+Искомый элемент находится на первой позиции последовательности нечётной длины & $A=\{0,1,2,3,4,5,6,7,8\}$, $T=0$ & 0 & 0\\\hline
+Искомый элемент находится на последней позиции последовательности нечётной длины & $A=\{0,1,2,3,4,5,6,7,8\}$, $T=8$ & 8 & 8\\\hline
+Искомого элемента нет в последовательности нечётной длины & $A=\{0,1,2,3,4,5,6,7,8\}$, $T=-1$ & $-1$ & $-1$\\\hline
+Искомый элемент находится в середине последовательности чётной длины & $A=\{0,1,2,3,4,5,6,7,8,9\}$, $T=4$ & 4 & 4\\\hline
+Искомый элемент находится на первой позиции последовательности чётной длины & $A=\{0,1,2,3,4,5,6,7,8,9\}$, $T=0$ & 0 & 0\\\hline
+Искомый элемент находится на последней позиции последовательности чётной длины & $A=\{0,1,2,3,4,5,6,7,8,9\}$, $T=8$ & 8 & 8\\\hline
+Искомого элемента нет в последовательности чётной длины & $A=\{0,1,2,3,4,5,6,7,8,9\}$, $T=-1$ & $-1$ & $-1$\\\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]\centering
+\caption{Модульные тесты алгоритмов бинарного поиска, часть 2}\label{tab:tests3}
+\small
+\begin{tabularx}{\textwidth}{|X|X|c|c|}\hline
+Сценарий & Входные данные & Эталонный результат & Полученный результат\\\hline
+Пустая последовательность & $A=\{\}$, $T=0$ & $-1$ & $-1$\\\hline
+Единственный элемент последовательности совпадает с искомым значением & $A=\{0\}$, $T=0$ & 0 & 0\\\hline
+Единственный элемент последовательности не совпадает с искомым значением & $A=\{0\}$, $T=-1$ & $-1$ & $-1$\\\hline
+Неотсортированная последовательность & $A=\{5,4,3,2,1,0\}$, $T=0$ & Ошибка & Ошибка\\\hline
+\end{tabularx}
+\end{table}
+
+\conclusion{Описаны средства реализации алгоритмов, реализованы разработанные алгоритмы, выполнено модульное тестирование реализации алгоритмов. Все проверенные сценарии дали ожидаемый результат.}
+
+\clearpage\section{Исследовательская часть}
+\label{sec:research}
+
+\subsection{Теоретическая оценка затрачиваемой памяти}
+В алгоритме полного перебора и нерекурсивных бинарных поисках не задействуются дополнительные динамические структуры данных, используются только скалярные переменные, объем которых не зависит от входного размера $n$. Следовательно, оценка затрачиваемой памяти для них составляет $O(1)$.
+
+В алгоритме рекурсивного бинарного поиска на каждый уровень вложенности вызова расходуется память системного стека под локальные переменные. В лучшем случае (элемент найден на первой итерации) глубина рекурсии равна 1, затраты памяти $O(1)$. В худшем случае (элемент отсутствует) глубина вызовов достигает $\log_2 n$, что дает оценку затрачиваемой памяти $O(\log n)$.
+
+\subsection{Оценка вычислительной сложности алгоритмов как функции от числа сравнений}
+Пусть количество элементов последовательности равно $n$. Для работы алгоритмов бинарного поиска входной массив должен быть предварительно отсортирован по возрастанию.
+
+\subsubsection{Метод полного перебора}
+Худшим случаем является отсутствие искомого элемента в последовательности (либо его нахождение в самом конце), тогда сложность по числу сравнений составляет $O(n)$. Лучший случай — нахождение элемента на первой позиции ($O(1)$).
+
+\subsubsection{Итеративный бинарный поиск с двумя сравнениями}
+Лучший случай — элемент находится ровно в центре массива на первой итерации ($O(1)$). Худший случай — элемент отсутствует, сложность составляет $O(\log n)$.
+
+\subsubsection{Итеративный бинарный поиск с одним сравнением}
+Алгоритм совершает фиксированное число шагов сужения диапазона, а проверка равенства вынесена за цикл. Вычислительная сложность в общем случае составляет $O(\log n)$.
+
+\subsubsection{Рекурсивный бинарный поиск}
+Аналогично итеративным аналогам, сложность по числу ключевых сравнений составляет $O(1)$ в лучшем случае и $O(\log n)$ в худшем случае.
+
+\subsection{Сравнительный анализ алгоритмов}
+В таблице 4.1 приведены результаты анализа алгоритмов по количеству затрачиваемой памяти и вычислительной сложности как функции от числа сравнений.
+
+\begin{table}[H]\centering
+\caption{Результаты сравнительного анализа алгоритмов}\label{tab:compare}
+\small
+\begin{tabularx}{\textwidth}{|X|c|c|X|c|}\hline
+Алгоритм & \multicolumn{2}{c|}{Оценка вычислительной сложности как функции от числа сравнений} & Требования, налагаемые на алгоритм & Оценка затрачиваемой памяти \\\cline{2-3}
+ & Л.с. & Х.с. & & \\\hline
+Полный перебор & $O(1)$ & $O(n)$ & --- & $O(1)$\\\hline
+Итеративный бинарный поиск №1 & $O(1)$ & $O(\log n)$ & Последовательность чисел должна быть отсортирована & $O(1)$\\\hline
+Итеративный бинарный поиск №2 & $O(\log n)$ & $O(\log n)$ & Последовательность чисел должна быть отсортирована & $O(1)$\\\hline
+Рекурсивный бинарный поиск & $O(1)$ & $O(\log n)$ & Последовательность чисел должна быть отсортирована & Л.с.: $O(1)$, х.с.: $O(\log n)$\\\hline
+\end{tabularx}
+\end{table}
+
+\conclusion{Выполнена теоретическая оценка памяти и временной эффективности в терминах числа сравнений. Установлено, что алгоритмы бинарного поиска значительно эффективнее полного перебора при больших $n$. Рекурсивный вариант уступает итеративным по потреблению памяти в худшем случае из-за стека вызовов, а на все бинарные поиски накладывается дополнительное требование предварительной сортировки.}
+
+\structhead{ЗАКЛЮЧЕНИЕ}
+\noindent\hspace*{\parindent}Выполнен сравнительный анализ ресурсной эффективности алгоритмов поиска элемента в массиве чисел.
+
+\noindent Решены следующие задачи:
+\begin{enumerate}
+\item описана решаемая задача;
+\item разработаны рекурсивный и нерекурсивные алгоритмы решения задачи;
+\item разработанные алгоритмы описаны схемами алгоритмов;
+\item описаны требования к программному обеспечению;
+\item описаны средства реализации алгоритмов;
+\item реализованы разработанные алгоритмы;
+\item выполнено тестирование реализации алгоритмов;
+\item выполнена теоретическая оценка затрачиваемой реализацией каждого алгоритма памяти;
+\item оценена временная эффективность реализаций алгоритмов в лучшем и худшем случае в терминах числа сравнений искомой величины с другими величинами;
+\item результаты сравнительного анализа представлены в формате таблицы;
+\item сделаны выводы из сравнительного анализа реализации разработанных алгоритмов решения задачи, по критериям временной и ёмкостной эффективности, а также дополнительных требований, налагаемых алгоритмом.
+\end{enumerate}
+
+\noindent По результатам исследования подтверждено, что бинарные алгоритмы обладают логарифмической сложностью $O(\log n)$ и превосходят линейный перебор $O(n)$. Нерекурсивные алгоритмы демонстрируют более стабильное и экономичное потребление памяти по сравнению с рекурсивным подходом.
+
+\structhead{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\begin{enumerate}\small\sloppy
+\item Кормен Т., Лейзерсон Ч., Ривест Р., Штайн К. Алгоритмы: построение и анализ. 3-е изд. М.: Вильямс, 2022. 1296 с.
+\item Левитин А.~В. Алгоритмы: введение в разработку и анализ. Москва: Издательский дом «Вильямс», 2006.
+\item Documentation -- The Go Programming Language [Электронный ресурс]. Режим доступа: \url{https://go.dev/doc} (дата обращения: 10.09.2026).
+\end{enumerate}
+
+\end{document}
