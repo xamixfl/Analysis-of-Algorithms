@@ -236,8 +236,9 @@
 \draw[flow] (eq)--node[lbl,left]{нет}(lt);
 \draw[flow] (lt)--node[lbl,above left]{да}(left);
 \draw[flow] (lt)--node[lbl,above right]{нет}(right);
-\draw[flow] (left.south) -- ++(0,-5mm) -| ([xshift=-20mm]bound.west) |- (bound.west);
-\draw[flow] (right.south) -- ++(0,-5mm) -| ([xshift=-20mm]bound.west) |- (bound.west);
+% Опускаем линии ниже и уводим левее (xshift=-28mm), чтобы не пересекать блоки по пути наверх
+\draw[flow] (left.west) -| ([xshift=-35mm]bound.west) |- (bound.west);
+\draw[flow] (right.south) -- ++(0,-6mm) -| ([xshift=-35mm]bound.west) |- (bound.west);
 \end{tikzpicture}}
 \caption{Алгоритм бинарного поиска с двумя сравнениями}\label{fig:binary-two}
 \end{figure}
@@ -263,8 +264,11 @@
 \draw[flow] (mid)--(lt);
 \draw[flow] (lt)--node[lbl,above left]{да}(left);
 \draw[flow] (lt)--node[lbl,above right]{нет}(right);
-\draw[flow] (left.south) -- ++(0,-5mm) -| ([xshift=-20mm]bound.west) |- (bound.west);
-\draw[flow] (right.south) -- ++(0,-5mm) -| ([xshift=-20mm]bound.west) |- (bound.west);
+
+% Идеальный чистый обход слева без лишних ступенек под блоком
+\draw[flow] (left.west) -| ([xshift=-50mm]bound.west) |- (bound.west);
+\draw[flow] (right.south) -- ++(0,-9mm) -| ([xshift=-50mm]bound.west);
+
 \draw[flow] (last)--node[lbl,right]{да}(hit);
 \draw[flow] (last)--node[lbl,right]{нет}(miss);
 \end{tikzpicture}}
