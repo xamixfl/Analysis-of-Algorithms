@@ -16,7 +16,7 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,shapes.geometric,positioning}
+\usetikzlibrary{arrows.meta,shapes.geometric,positioning,calc}
 \usepackage{listings}
 \usepackage{caption}
 \usepackage{tocloft}
@@ -66,6 +66,7 @@
   term/.style={draw,ellipse,align=center,minimum width=28mm,minimum height=8mm},
   proc/.style={draw,rectangle,align=center,minimum width=38mm,minimum height=9mm},
   dec/.style={draw,diamond,aspect=2.3,align=center,inner sep=1pt,minimum width=34mm},
+  mod/.style={draw,regular polygon,regular polygon sides=6,align=center,inner sep=1pt,minimum width=38mm},
   lbl/.style={font=\small,fill=white,inner sep=1pt}
 }
 \newcommand{\structhead}[1]{\clearpage\phantomsection\addcontentsline{toc}{section}{#1}\begin{center}\bfseries #1\end{center}\vspace{0.5em}}
@@ -101,8 +102,10 @@
 \vfill
 \begin{center}Москва, 2026\end{center}
 \end{titlepage}
-
+\clearpage
+\pagenumbering{arabic}
 \setcounter{page}{2}
+
 \renewcommand{\contentsname}{СОДЕРЖАНИЕ}
 \tableofcontents
 
@@ -195,7 +198,7 @@
 \begin{tikzpicture}[node distance=10mm]
 \node[term] (s) {Начало};
 \node[proc,below=of s] (init) {result := -1};
-\node[dec,below=of init] (bound) {Цикл по $i$ от 0 до $n-1$};
+\node[mod,below=of init] (bound) {Цикл по $i$ от 0 до $n-1$};
 \node[dec,below=of bound] (eq) {$a_i$ равно target?};
 \node[proc,below=of eq] (inc) {$i := i + 1$};
 \node[term,right=42mm of bound] (miss) {Вернуть result};
@@ -205,7 +208,7 @@
 \draw[flow] (bound)--node[lbl,above]{нет}(miss);
 \draw[flow] (eq)--node[lbl,above]{да}(hit);
 \draw[flow] (eq)--node[lbl,left]{нет}(inc);
-\draw[flow] (inc.west)--++(-20mm,0)|-(bound.west);
+\draw[flow] (inc.south) -- ++(0,-5mm) -| ([xshift=-15mm]bound.west) |- (bound.west);
 \end{tikzpicture}}
 \caption{Алгоритм полного перебора}\label{fig:linear}
 \end{figure}
@@ -217,7 +220,7 @@
 \begin{tikzpicture}[node distance=9mm]
 \node[term] (s) {Начало};
 \node[proc,below=of s] (init) {$l:=0,\ r:=n-1$};
-\node[dec,below=of init] (bound) {Пока $l$ меньше или равно $r$};
+\node[mod,below=of init] (bound) {Пока $l$ меньше или равно $r$};
 \node[proc,below=of bound] (mid) {$m:=(l+r)/2$};
 \node[dec,below=of mid] (eq) {target равно $a[m]$?};
 \node[dec,below=of eq] (lt) {target меньше $a[m]$?};
@@ -233,8 +236,8 @@
 \draw[flow] (eq)--node[lbl,left]{нет}(lt);
 \draw[flow] (lt)--node[lbl,above left]{да}(left);
 \draw[flow] (lt)--node[lbl,above right]{нет}(right);
-\draw[flow] (left.west)--++(-13mm,0)|-(bound.west);
-\draw[flow] (right.south)--++(0,-14mm)-|([xshift=-60mm]bound.west)--(bound.west);
+\draw[flow] (left.south) -- ++(0,-5mm) -| ([xshift=-20mm]bound.west) |- (bound.west);
+\draw[flow] (right.south) -- ++(0,-5mm) -| ([xshift=-20mm]bound.west) |- (bound.west);
 \end{tikzpicture}}
 \caption{Алгоритм бинарного поиска с двумя сравнениями}\label{fig:binary-two}
 \end{figure}
@@ -246,7 +249,7 @@
 \begin{tikzpicture}[node distance=9mm]
 \node[term] (s) {Начало};
 \node[proc,below=of s] (init) {$l:=0,\ r:=n-1$};
-\node[dec,below=of init] (bound) {Пока $l$ меньше $r$};
+\node[mod,below=of init] (bound) {Пока $l$ меньше $r$};
 \node[proc,below=of bound] (mid) {$m:=l+(r-l+1)/2$};
 \node[dec,below=of mid] (lt) {$a[m]$ больше target?};
 \node[proc,below left=12mm and 26mm of lt] (left) {$l:=m$};
@@ -260,8 +263,8 @@
 \draw[flow] (mid)--(lt);
 \draw[flow] (lt)--node[lbl,above left]{да}(left);
 \draw[flow] (lt)--node[lbl,above right]{нет}(right);
-\draw[flow] (left.west)--++(-13mm,0)|-(bound.west);
-\draw[flow] (right.south)--++(0,-14mm)-|([xshift=-60mm]bound.west)--(bound.west);
+\draw[flow] (left.south) -- ++(0,-5mm) -| ([xshift=-20mm]bound.west) |- (bound.west);
+\draw[flow] (right.south) -- ++(0,-5mm) -| ([xshift=-20mm]bound.west) |- (bound.west);
 \draw[flow] (last)--node[lbl,right]{да}(hit);
 \draw[flow] (last)--node[lbl,right]{нет}(miss);
 \end{tikzpicture}}
@@ -274,7 +277,7 @@
 \resizebox{0.90\textwidth}{!}{%
 \begin{tikzpicture}[node distance=9mm]
 \node[term] (s) {Вызов recursive()};
-\node[dec,below=of s] (empty) {$l$ больше $r$?};
+\node[mod,below=of s] (empty) {$l$ больше $r$?};
 \node[proc,below=of empty] (mid) {$m:=(l+r)/2$};
 \node[dec,below=of mid] (eq) {target равно $a[m]$?};
 \node[dec,below=of eq] (lt) {target меньше $a[m]$?};
@@ -358,7 +361,7 @@ int binarySearchIterativeTwoCmp(const std::vector<int>& arr, int target, long lo
 
 \clearpage
 \noindent\begin{minipage}{\linewidth}
-\begin{lstlisting}[caption={Реализация алгоритма нерекурсивного алгоритма бинарного поиска с одним сравнением},label={lst:one}]
+\begin{lstlisting}[caption={Реализация нерекурсивного алгоритма бинарного поиска с одним сравнением},label={lst:one}]
 int binarySearchIterativeOneCmp(const std::vector<int>& arr, int target, long long& comparisonCount) {
     comparisonCount = 0;
     int left = 0;
@@ -529,9 +532,9 @@ int binarySearchRecursive(const std::vector<int>& arr, int target, long long& co
 
 \structhead{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
 \begin{enumerate}\small\sloppy
-\item Кормен Т., Лейзерсон Ч., Ривест Р., Штайн К. Алгоритмы: построение и анализ. 3-е изд. М.: Вильямс, 2022. 1296 с.
-\item Левитин А.~В. Алгоритмы: введение в разработку и анализ. Москва: Издательский дом «Вильямс», 2006.
-\bibitem{stroustrup} Страуструп Б. Язык программирования C++. Специальное издание. М.: Бином-Пресс, 2021. 1104 с.
+\item Кормен, Т. Алгоритмы: построение и анализ / Т. Кормен, Ч. Лейзерсон, Р. Ривест, К. Штайн. — 3-е изд. — Москва : Вильямс, 2022. — 1296 с.
+\item Левитин, А. В. Алгоритмы: введение в разработку и анализ / А. В. Левитин. — Москва : Вильямс, 2006. — 576 с.
+\item Страуструп, Б. Язык программирования C++ / Б. Страуструп. — Специальное издание. — Москва : Бином-Пресс, 2021. — 1104 с.
 \end{enumerate}
 
 \end{document}
