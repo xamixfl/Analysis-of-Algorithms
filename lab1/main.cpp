@@ -69,6 +69,7 @@ int binarySearchIterative1(const std::vector<int>& arr, int x, long long& compar
     return -1;
 }
 
+
 // 4. Итеративный бинарный поиск 2 (сортированный массив)
 int binarySearchIterative2(const std::vector<int>& arr, int x, long long& comparisonCount) {
     comparisonCount = 0;

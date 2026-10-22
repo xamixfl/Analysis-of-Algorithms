@@ -1,0 +1,131 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="jrAa_KaTRkygqI0IzmYU">
+    <mxGraphModel dx="812" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-33" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=30;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="VO8D1JTsu_gKGRDSQLfc-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-34" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start" value="&lt;font face=&quot;Times New Roman&quot;&gt;Начало&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="660" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-35" parent="1" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" value="&lt;font face=&quot;Times New Roman&quot;&gt;Вход:&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;arr - упорядоченный по возрастанию&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;массив целых чисел,&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;arr.size() - размер массива arr&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;x - целевой элемент&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Выход:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;индекс найденного&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;элемента, если&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;такого элемента нет, то -1&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="50" x="840" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-36" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-34" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="VO8D1JTsu_gKGRDSQLfc-35" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1000" y="455" as="sourcePoint" />
+            <mxPoint x="1050" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-37" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="VO8D1JTsu_gKGRDSQLfc-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-38" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font face=&quot;Times New Roman&quot;&gt;left = 0, right = arr.size() - 1, res = -1&amp;nbsp;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="660" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-39" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;" target="VO8D1JTsu_gKGRDSQLfc-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-40" parent="1" style="shape=loopLimit;whiteSpace=wrap;html=1;" value="&lt;font face=&quot;Times New Roman&quot;&gt;Пока left &amp;lt;= right, res == -1&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="660" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-41" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="VO8D1JTsu_gKGRDSQLfc-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pNQtNEdkOZ6knyF44jib-1" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" x="0.0039" as="geometry">
+            <mxPoint x="540" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-42" parent="1" style="shape=loopLimit;whiteSpace=wrap;html=1;flipV=1;legacyAnchorPoints=0;" value="&lt;font face=&quot;Times New Roman&quot;&gt;Конец пока&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="660" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-43" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="VO8D1JTsu_gKGRDSQLfc-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font face=&quot;Times New Roman&quot;&gt;mid = left + (right - left) / 2&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="660" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-45" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="VO8D1JTsu_gKGRDSQLfc-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-46" connectable="0" parent="VO8D1JTsu_gKGRDSQLfc-45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;br&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Да&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.404" y="3" as="geometry">
+            <mxPoint x="-7" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-47" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="VO8D1JTsu_gKGRDSQLfc-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-48" connectable="0" parent="VO8D1JTsu_gKGRDSQLfc-47" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Нет&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0353" y="-2" as="geometry">
+            <mxPoint x="40" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-49" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="&lt;font face=&quot;Times New Roman&quot;&gt;x == arr[mid]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="660" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font face=&quot;Times New Roman&quot;&gt;Вернуть mid&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="870" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-52" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="VO8D1JTsu_gKGRDSQLfc-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-53" connectable="0" parent="VO8D1JTsu_gKGRDSQLfc-52" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Да&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.024" y="-1" as="geometry">
+            <mxPoint x="-14" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-54" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="VO8D1JTsu_gKGRDSQLfc-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-55" connectable="0" parent="VO8D1JTsu_gKGRDSQLfc-54" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Нет&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.1939" y="3" as="geometry">
+            <mxPoint x="12" y="-32" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-56" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="&lt;font face=&quot;Times New Roman&quot;&gt;arr[mid] &amp;lt; x&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="460" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-57" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="644.97" y="745" />
+            </Array>
+            <mxPoint x="540" y="745" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-58" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font face=&quot;Times New Roman&quot;&gt;left = mid + 1&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="570" y="665" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-59" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" x="0.0065" as="geometry">
+            <mxPoint x="540" y="765" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-60" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;;&quot;&gt;right = mid - 1&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="350" y="665" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-62" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font face=&quot;Times New Roman&quot;&gt;Вернуть -1&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="660" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-63" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start" value="&lt;font face=&quot;Times New Roman&quot;&gt;Конец&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="660" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="VO8D1JTsu_gKGRDSQLfc-64" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=-30;entryPerimeter=0;endArrow=none;endFill=0;" target="VO8D1JTsu_gKGRDSQLfc-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lgQ1bcnwhxTGQdvLxCPV-4" edge="1" parent="1" source="VO8D1JTsu_gKGRDSQLfc-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=-30;entryPerimeter=0;" target="VO8D1JTsu_gKGRDSQLfc-63">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="945" y="980" />
+              <mxPoint x="735" y="980" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
