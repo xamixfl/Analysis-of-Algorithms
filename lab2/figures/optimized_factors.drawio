@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="530" pageHeight="792">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n0" parent="1" vertex="1" value="Начало" style="shape=stencil(vZXxboMgEMafhj9dUNwDLG57j9NelRTBIKv27YegWdHq1s3OmJD7Dn/3nZyRsKytoEGSUAk1EvZKkiTHkku7WrHySkp92PkwnmJoGyyMF8+gOeQCfaY1Wp2w4wczIrisUHMzZNkboS92z3CzrFBSWghXsg0yV3kLAy7ts7T3sLH8JYgay6/RoB5NepUk7z/HPj0/Bhw/yG+Indzv7nc/cOg4ftTB7QaOf49lmVXWhptlORSnUqsPebhp5siFKJRQ2oZ+dbVIwuh4bTfTwPDhLRJTulZn/OpydizpJntCgC5WCWOkZ1l9CWMBusTIgqKjgDJ4m22H2CzlPoKet5FWBoaXGlTbtiu4vOo4vm34jo7nhPQPPdN/6fmuU3bTuxgip65Mrp1ZpfGbkfa/hY2qqxtc6UUFp/o/mBM+AQ==);whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=7;spacingBottom=4;rounded=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontSize=12;">
+          <mxGeometry as="geometry" x="50.0" y="12" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e1" parent="1" edge="1" source="n0" target="n1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n1" parent="1" vertex="1" value="A Для i от 0 до m−1" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;shape=loopLimit;">
+          <mxGeometry as="geometry" x="50.0" y="60" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e2" parent="1" edge="1" source="n1" target="n2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="f ← 0" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;">
+          <mxGeometry as="geometry" x="50.0" y="108" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e3" parent="1" edge="1" source="n2" target="n3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="B Для k от 0 до e−2, шаг 2" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;shape=loopLimit;">
+          <mxGeometry as="geometry" x="50.0" y="156" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e4" parent="1" edge="1" source="n3" target="n4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="f += A[i,k] · A[i,k+1]" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;">
+          <mxGeometry as="geometry" x="50.0" y="204" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e5" parent="1" edge="1" source="n4" target="n5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="B" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;shape=loopLimit;direction=west;">
+          <mxGeometry as="geometry" x="50.0" y="252" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e6" parent="1" edge="1" source="n5" target="n6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="row[i] ← f" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;">
+          <mxGeometry as="geometry" x="50.0" y="300" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e7" parent="1" edge="1" source="n6" target="n7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="A" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;shape=loopLimit;direction=west;">
+          <mxGeometry as="geometry" x="50.0" y="348" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e8" parent="1" edge="1" source="n7" target="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="D Для j от 0 до q−1" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;shape=loopLimit;">
+          <mxGeometry as="geometry" x="50.0" y="396" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e9" parent="1" edge="1" source="n8" target="n9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n9" parent="1" vertex="1" value="f ← 0" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;">
+          <mxGeometry as="geometry" x="50.0" y="444" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e10" parent="1" edge="1" source="n9" target="n10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n10" parent="1" vertex="1" value="E Для k от 0 до e−2, шаг 2" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;shape=loopLimit;">
+          <mxGeometry as="geometry" x="50.0" y="492" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e11" parent="1" edge="1" source="n10" target="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n11" parent="1" vertex="1" value="f += B[k,j] · B[k+1,j]" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;">
+          <mxGeometry as="geometry" x="50.0" y="540" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e12" parent="1" edge="1" source="n11" target="n12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n12" parent="1" vertex="1" value="E" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;shape=loopLimit;direction=west;">
+          <mxGeometry as="geometry" x="50.0" y="588" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e13" parent="1" edge="1" source="n12" target="n13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n13" parent="1" vertex="1" value="col[j] ← f" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;">
+          <mxGeometry as="geometry" x="50.0" y="636" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e14" parent="1" edge="1" source="n13" target="n14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n14" parent="1" vertex="1" value="D" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;shape=loopLimit;direction=west;">
+          <mxGeometry as="geometry" x="50.0" y="684" width="230" height="32" />
+        </mxCell>
+        <mxCell id="e15" parent="1" edge="1" source="n14" target="n15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n15" parent="1" vertex="1" value="Конец" style="shape=stencil(vZXxboMgEMafhj9dUNwDLG57j9NelRTBIKv27YegWdHq1s3OmJD7Dn/3nZyRsKytoEGSUAk1EvZKkiTHkku7WrHySkp92PkwnmJoGyyMF8+gOeQCfaY1Wp2w4wczIrisUHMzZNkboS92z3CzrFBSWghXsg0yV3kLAy7ts7T3sLH8JYgay6/RoB5NepUk7z/HPj0/Bhw/yG+Indzv7nc/cOg4ftTB7QaOf49lmVXWhptlORSnUqsPebhp5siFKJRQ2oZ+dbVIwuh4bTfTwPDhLRJTulZn/OpydizpJntCgC5WCWOkZ1l9CWMBusTIgqKjgDJ4m22H2CzlPoKet5FWBoaXGlTbtiu4vOo4vm34jo7nhPQPPdN/6fmuU3bTuxgip65Mrp1ZpfGbkfa/hY2qqxtc6UUFp/o/mBM+AQ==);whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=7;spacingBottom=4;rounded=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontSize=12;">
+          <mxGeometry as="geometry" x="50.0" y="732" width="230" height="32" />
+        </mxCell>
+        <mxCell id="annotation" parent="1" vertex="1" style="whiteSpace=wrap;html=0;strokeColor=#000000;fillColor=#ffffff;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;text;align=left;strokeColor=none;fillColor=none;" value="Вход: A, B, e, m, q&#10;Выход: row, col&#10;e — чётная часть n.&#10;При e=0 внутренние&#10;циклы не выполняются.">
+          <mxGeometry as="geometry" x="335" y="12" width="190" height="90" />
+        </mxCell>
+        <mxCell id="annotation-edge" parent="1" edge="1" source="n0" target="annotation" style="endArrow=none;dashed=1;strokeColor=#000000;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

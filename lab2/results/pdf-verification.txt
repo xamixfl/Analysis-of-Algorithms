@@ -1,0 +1,3 @@
+PDF: 26 A4 pages.
+No undefined references, missing glyphs or overfull boxes.
+All pages rendered and visually inspected.

@@ -1,0 +1,8 @@
+PASS: 1018 test cases, three algorithms; seed 20261023
+PASS: manual rectangular multiplication in all three algorithms
+PASS: invalid token, fractional token, integer overflow and invalid menu option are rejected
+PASS: n=2000 and elements=1000000 produce 2000000000000000 in all algorithms
+PASS: raw.csv: 240 rows, K>=10, positive CPU times
+PASS: summary.csv: 48 rows, K>=10, positive CPU times
+PASS: all CSV medians match the raw five-series measurements
+PASS: 1018 cases in GCC -O0 -D_GLIBCXX_DEBUG build

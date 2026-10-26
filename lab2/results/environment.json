@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-23",
+  "cpu": "Intel Core i3-1115G4 @ 3.00 GHz",
+  "os": "Windows build 26200",
+  "logical_processors": 4,
+  "compiler": "g++ MSYS2 UCRT64 14.2.0 Rev2",
+  "flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic",
+  "timer": "GetProcessTimes kernel + user",
+  "seed": 20261023,
+  "series": 5,
+  "minimum_k": 10,
+  "calibration_target_cpu_s": 0.25,
+  "sha256": {
+    "main.cpp": "e9b406520f2f4645b6b152d0245325fe4ff000f0ece3c2d9535b054987f76084",
+    "algorithms.cpp": "1aed96d7296e8b69c0aa5c0605de82fc529c8e5b707d6d24c2b9850c132556c2",
+    "algorithms.hpp": "8286f02ac53c10427353a9cd8cf05326cb46c1577b5866d4d81495b5a8adb84e",
+    "matrix_lab.exe": "ca899ec9188b90783ed72b2a1d79d4fc7d6b2cd866989899c5da6d9e7a6f78ba"
+  }
+}
