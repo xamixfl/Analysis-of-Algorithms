@@ -1,0 +1,11 @@
+﻿Date: 2026-10-26
+Platform: Windows, GCC 14.2.0 (MSYS2 UCRT64)
+Main build: g++ -std=c++17 -O2 -Wall -Wextra -Wpedantic main.cpp algorithms.cpp -o reverse_number.exe
+Test build: g++ -std=c++17 -O0 -Wall -Wextra -Wpedantic tests/test_algorithms.cpp algorithms.cpp -o tests/test_algorithms.exe
+Commands: ./tests/test_algorithms.exe; python tests/verify_cli.py; python tests/verify_models.py
+
+PASS: 19017 algorithm cases (19010 valid, 7 invalid).
+PASS: 40 CLI cases.
+PASS: iterative history: 15 vertices, 16 edges; compact projection agrees.
+PASS: recursive history: 23 vertices, 28 edges; compact projection agrees.
+

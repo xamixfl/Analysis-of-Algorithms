@@ -1,0 +1,9 @@
+*.exe
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+build/
+tmp/
+__pycache__/
