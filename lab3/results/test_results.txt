@@ -6,6 +6,9 @@ Commands: ./tests/test_algorithms.exe; python tests/verify_cli.py; python tests/
 
 PASS: 19017 algorithm cases (19010 valid, 7 invalid).
 PASS: 40 CLI cases.
-PASS: iterative history: 15 vertices, 16 edges; compact projection agrees.
-PASS: recursive history: 23 vertices, 28 edges; compact projection agrees.
+Model checks updated: 2026-11-04
+PASS: iterative history: 19 vertices, 20 edges; compact projection agrees.
+PASS: recursive history: 27 vertices, 32 edges; compact projection agrees.
+PASS: parameterized figures contain ellipses; conditions consume n.
+PASS: history sizes and compact projections checked for 1..19 digits.
 

@@ -18,13 +18,13 @@ decision/.style={draw,diamond,aspect=3,minimum width=3.7cm,minimum height=1.0cm,
 \node[p] (ret) at (0,-8.4) {Вернуть $t$};
 \node[term] (end) at (0,-10.0) {Конец};
 \draw (-1.55,-7.5)--(-1.55,-6.7); \draw (1.55,-7.5)--(1.55,-6.7);
-\draw (s)--(test); \draw (test.east)--node[tag,above]{Да}(base.west); \draw (test.south)--node[tag,right]{Нет}(d.north);
+\draw (s)--(test); \draw[edge] (test.east)--(2.2,-1.6)--node[tag,left]{Да}(2.2,-0.9)--(4.5,-0.9)--(base.north); \draw (test.south)--node[tag,right]{Нет}(d.north);
 \draw (d)--(q);
 \draw (q)--(b);
 \draw (b)--(call);
 \draw (call)--(ret);
 \draw (ret)--(end);
-\draw[edge] (base.south)--(4.5,-9.2)--(0,-9.2);
+\draw[edge] (base.south) |- ([yshift=4mm]end.north) -- (end.north);
 \draw (2.6,0.55)--(2.3,0.55)--(2.3,-0.65)--(2.6,-0.65); \draw[dashed] (s.east)--(2.3,0);
 \node[align=left,font=\footnotesize] (note) at (4.5,-0.05) {Вход: $n$, накопитель $a$.\\Выход: $R(n,a)$.\\Первый вызов: $R(n,0)$.};
 
