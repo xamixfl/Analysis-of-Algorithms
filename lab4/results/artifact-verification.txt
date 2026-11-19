@@ -1,0 +1,1 @@
+PASS: measured source/executable hashes, 3500 records, 35 complete groups, recomputed means, identical masks/checksums.

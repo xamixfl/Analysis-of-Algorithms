@@ -1,0 +1,17 @@
+\begin{tikzpicture}[node distance=7mm,terminator/.append style={minimum height=8mm},process/.append style={minimum height=8mm},data/.append style={minimum height=8mm},loop start/.append style={minimum height=10mm},loop end/.append style={minimum height=8mm}]
+\node[terminator] (a) {Начало};
+\node[data,below=of a] (b) {$I$, $N$};
+\node[process,below=of b] (c) {$h[0..255]\gets0$};
+\node[loop start,below=of c] (d) {Цикл I\\$i=0,\ldots,N-1$};
+\node[process,below=of d] (e) {$h[I_i]\gets h[I_i]+1$};
+\node[loop end,below=of e] (f) {Цикл I};
+\node[subroutine,below=of f] (g) {$T\gets\operatorname{Оцу}(h,N)$};
+\node[loop start,below=of g] (h) {Цикл J\\$i=0,\ldots,N-1$};
+\node[process,below=of h] (i) {$B_i\gets255\cdot[I_i>T]$};
+\node[loop end,below=of i] (j) {Цикл J};
+\node[data,below=of j] (k) {$B$, $T$};
+\node[terminator,below=of k] (l) {Конец};
+\foreach \x/\y in {a/b,b/c,c/d,d/e,e/f,f/g,g/h,h/i,i/j,j/k,k/l}
+\draw[flow] (\x.south)--(\y.north);
+\end{tikzpicture}
+

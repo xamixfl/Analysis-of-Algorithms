@@ -1,0 +1,5 @@
+API: 7 invalid checks, 14 equivalence/in-place cases, q>n: PASS
+Oracle: 30 images x 7 modes = 210 exact threshold/mask checks: PASS
+PGM: 5 binary-raster/CRLF cases, 12 malformed inputs: PASS
+CLI: 6 invalid q, missing input, unwritable output, missing arguments: PASS
+Launch failure: 4 injected failures, existing workers joined, mask untouched: PASS

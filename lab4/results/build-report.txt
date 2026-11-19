@@ -1,0 +1,743 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(report.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(shared/preamble.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extarticle.c
+ls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\size14.clo)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/base\exscale.sty))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpa
+rse.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-x
+etex.def)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xet
+ex.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg
+))) (C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/babel\xebabel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/ru\bab
+el-russian.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/babel-russian\russian
+b.ldf))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
+))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
+) (C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/tools\hhline.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty)
+
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+))
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cf
+g)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.de
+f)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
+x))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tik
+z.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.st
+y
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.
+sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
+il-common.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
+il-latex.def)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrc
+s.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.te
+x)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcor
+e.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics
+.cfg)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsy
+s.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sys.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
+ys.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
+yslibraryfiltered.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+.cfg)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sys-xetex.def
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sys-dvipdfmx.def
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sys-common-pdf.def))))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+syssoftpath.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
+sysprotocol.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+ore.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.co
+de.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathuti
+l.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpar
+ser.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.basic.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.trigonometric.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.random.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.comparison.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.base.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.round.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.misc.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
+ctions.integerarithmetics.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcal
+c.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathflo
+at.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.cod
+e.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepoints.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepathconstruct.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepathusage.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orescopes.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oregraphicstate.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oretransformations.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orequick.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreobjects.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepathprocessing.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orearrows.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreshade.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreimage.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oreexternal.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orelayers.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+oretransparency.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orepatterns.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
+orerdf.code.tex)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
+leshapes.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
+leplot.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgf
+comp-version-0-65.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgf
+comp-version-1-18.sty))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.
+sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys
+.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
+ys.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.co
+de.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffo
+r.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz\tikz.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
+braryplothandlers.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
+lematrix.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
+
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.r
+evision.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.c
+ode.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsco
+re.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplo
+tssysgeneric.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfpl
+otslibrary.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcomp
+atib\pgfplotsoldpgfsupp_loader.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
+braryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcomp
+atib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfpl
+otsutil.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
+ure\pgfplotsliststructure.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
+ure\pgfplotsliststructureext.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
+ure\pgfplotsarray.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
+ure\pgfplotsmatrix.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\p
+gfplotstableshared.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
+ure\pgfplotsdeque.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfpl
+otsbinary.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfpl
+otsbinary.data.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfpl
+otsutil.verb.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfli
+brarypgfplots.surfshading.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflib
+rarypgfplots.surfshading.pgfsys-xetex.def
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflib
+rarypgfplots.surfshading.pgfsys-dvipdfmx.def))))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfpl
+otscolormap.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfpl
+otscolor.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsst
+ackedplots.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotspl
+othandlers.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsme
+shplothandler.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsme
+shplotimage.code.tex)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.s
+caling.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsco
+ordprocessing.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.e
+rrorbars.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.m
+arkers.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsti
+cks.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.p
+aths.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
+ledecorations.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decor
+ations\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decor
+ations\pgflibrarydecorations.pathreplacing.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzl
+ibrarypgfplots.contourlua.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibraryplotmarks.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
+braryplotmarks.code.tex)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty)
+
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\ppxetex.def)
+)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.s
+ty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-n
+ometadata.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty))
+)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.s
+ty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefi
+nekeys.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape
+.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcm
+ds.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
+.sty)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gett
+itlestring.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.s
+ty)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc
+.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintca
+lc.sty)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
+ilecheck.sty
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqu
+ecounter.sty)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
+braryarrows.meta.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarypositioning.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibraryshapes.geometric.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shape
+s\pgflibraryshapes.geometric.code.tex)))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibraryshapes.misc.code.tex
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shape
+s\pgflibraryshapes.misc.code.tex))
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarycalc.code.tex)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+)
+(C:\Users\Алексей\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty)
+
+(C:\Users\Алексей\Documents\ChatGPT\Учеба 3\lab4_revision_1117\output\pdf\repor
+t.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+
+(C:\Users\Алексей\Documents\ChatGPT\Учеба 3\lab4_revision_1117\output\pdf\repor
+t.out)
+(C:\Users\Алексей\Documents\ChatGPT\Учеба 3\lab4_revision_1117\output\pdf\repor
+t.out)
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+\TU/TimesNewRoman(0)/m/n/14.4 Тема: «Последовательная и параллельная сегментаци
+я полутоновых 
+[1]
+(C:\Users\Алексей\Documents\ChatGPT\Учеба 3\lab4_revision_1117\output\pdf\repor
+t.toc) (docs/introduction.tex [2]
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/TimesNewRoman(0)/m/n/14.4 Полутоновое изображение представляет собой прям
+оугольную 
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+\TU/TimesNewRoman(0)/m/n/14.4 матрицу яркостей без цветовых каналов. Сегментаци
+ей называется 
+
+Underfull \hbox (badness 5316) in paragraph at lines 4--5
+[]\TU/TimesNewRoman(0)/m/n/14.4 Цель работы — разработать последовательный и па
+раллельный 
+
+Underfull \hbox (badness 5374) in paragraph at lines 4--5
+\TU/TimesNewRoman(0)/m/n/14.4 алгоритмы сегментации полутоновых изображений, ре
+ализовать их и 
+
+Underfull \hbox (badness 2150) in paragraph at lines 4--5
+\TU/TimesNewRoman(0)/m/n/14.4 исследовать зависимость реального времени расчёта
+ от числа рабочих 
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+[]\TU/TimesNewRoman(0)/m/n/14.4 разработать алгоритмы и схемы последовательного
+ потока,
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+[]\TU/TimesNewRoman(0)/m/n/14.4 измерить реальное время последовательной и пара
+ллельной
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/TimesNewRoman(0)/m/n/14.4 реализаций при числе рабочих потоков от одного до
+
+) (docs/analysis.tex [3]
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+\TU/TimesNewRoman(0)/m/n/14.4 Нулём обозначается класс тёмных пикселей, значени
+ем 255 — 
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+\TU/TimesNewRoman(0)/m/n/14.4 класс светлых. Связность областей и принадлежност
+ь конкретному 
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
+\TU/TimesNewRoman(0)/m/n/14.4 Для поиска максимума используется эквивалентный к
+ритерий без 
+[4]
+Underfull \hbox (badness 7116) in paragraph at lines 26--28
+\TU/TimesNewRoman(0)/m/n/14.4 порог принимается равным единственной яркости, ма
+ска получается 
+
+Underfull \hbox (badness 2103) in paragraph at lines 30--31
+[]\TU/TimesNewRoman(0)/m/n/14.4 Построение гистограммы и применение готового по
+рога требуют 
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+\TU/TimesNewRoman(0)/m/n/14.4 обхода всех пикселей. При непосредственном измене
+нии общей 
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+\TU/TimesNewRoman(0)/m/n/14.4 гистограммы потребовалась бы синхронизация каждог
+о приращения. 
+
+Underfull \hbox (badness 1960) in paragraph at lines 32--33
+\TU/TimesNewRoman(0)/m/n/14.4 два потока не записывают результат в один и тот ж
+е пиксель маски. 
+
+Underfull \hbox (badness 2608) in paragraph at lines 32--33
+\TU/TimesNewRoman(0)/m/n/14.4 Используется параллелизм по данным со статическим
+ распределением 
+) (docs/design.tex
+Underfull \hbox (badness 4156) in paragraph at lines 34--1
+\TU/TimesNewRoman(0)/m/n/14.4 сравниваются реализации выбранной бинарной сегмен
+тации; точность 
+[5] (figures/sequential.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+[]\TU/TimesNewRoman(0)/m/n/14.4 В единственном потоке создаётся нулевая гистогр
+амма, 
+[6] [7]
+Underfull \hbox (badness 1132) in paragraph at lines 14--16
+\TU/TimesNewRoman(0)/m/n/14.4 Размеры участков различаются не более чем на один
+ пиксель. Первый 
+
+Underfull \hbox (badness 4391) in paragraph at lines 14--16
+\TU/TimesNewRoman(0)/m/n/14.4 участок начинается с нуля, последний заканчиваетс
+я на $\OML/cmm/m/it/14.4 N$\TU/TimesNewRoman(0)/m/n/14.4 , а конец 
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для связи потоков используются мьютекс, то есть
+ средство 
+
+Underfull \hbox (badness 2781) in paragraph at lines 17--18
+\TU/TimesNewRoman(0)/m/n/14.4 число построенных гистограмм, флаг $\OML/cmm/m/it
+/14.4 p$ \TU/TimesNewRoman(0)/m/n/14.4 разрешает бинаризацию, флаг 
+
+Underfull \hbox (badness 4779) in paragraph at lines 17--18
+\OML/cmm/m/it/14.4 a$ \TU/TimesNewRoman(0)/m/n/14.4 обозначает отмену запуска. 
+Начальные значения равны нулю. Все 
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+\TU/TimesNewRoman(0)/m/n/14.4 создаются рабочие потоки. Диспетчер ожидает готов
+ности всех 
+
+Underfull \hbox (badness 2790) in paragraph at lines 20--21
+\TU/TimesNewRoman(0)/m/n/14.4 гистограмм, объединяет их и вычисляет порог. Зате
+м устанавливается 
+
+Underfull \hbox (badness 1281) in paragraph at lines 20--21
+\TU/TimesNewRoman(0)/m/n/14.4 устанавливается флаг отмены; уже созданные рабочи
+е пробуждаются и 
+(figures/dispatcher.tex) [8] [9] (figures/worker.tex)
+Underfull \hbox (badness 2057) in paragraph at lines 26--27
+\TU/TimesNewRoman(0)/m/n/14.4 свой участок изображения и маски, а также обнулён
+ную диспетчером 
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+\TU/TimesNewRoman(0)/m/n/14.4 гистограмму. После подсчёта частот увеличивается 
+$\OML/cmm/m/it/14.4 c$\TU/TimesNewRoman(0)/m/n/14.4 , уведомляется 
+[10] [11] (figures/interaction.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+[]\TU/TimesNewRoman(0)/m/n/14.4 На рисунке []4[] представлен порядок взаимодейс
+твия потоков. 
+
+Underfull \hbox (badness 2744) in paragraph at lines 33--34
+[]\TU/TimesNewRoman(0)/m/n/14.4 Ожидание условной переменной временно освобожда
+ет мьютекс; 
+
+Underfull \hbox (badness 6493) in paragraph at lines 33--34
+\TU/TimesNewRoman(0)/m/n/14.4 после пробуждения он вновь захватывается [[]]. Пр
+едикат ожидания 
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+\TU/TimesNewRoman(0)/m/n/14.4 проверяется в цикле, поэтому ложное пробуждение н
+е разрешает 
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+\TU/TimesNewRoman(0)/m/n/14.4 преждевременную бинаризацию. После копирования по
+рога мьютекс 
+
+Underfull \hbox (badness 2941) in paragraph at lines 35--36
+\TU/TimesNewRoman(0)/m/n/14.4 подсчёте частот конфликтов записи нет. Для каждог
+о уровня яркости 
+
+Underfull \hbox (badness 2707) in paragraph at lines 35--36
+\TU/TimesNewRoman(0)/m/n/14.4 сумма локальных счётчиков совпадает со счётчиком 
+последовательной 
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+[]\TU/TimesNewRoman(0)/m/n/14.4 Видимость законченных гистограмм и вычисленного
+ порога 
+
+Underfull \hbox (badness 4378) in paragraph at lines 37--38
+\TU/TimesNewRoman(0)/m/n/14.4 Маска разбита на непересекающиеся участки; общий 
+вход во время 
+
+Underfull \hbox (badness 2351) in paragraph at lines 37--38
+\TU/TimesNewRoman(0)/m/n/14.4 вычисления не изменяется. После ожидания завершен
+ия всех рабочих 
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+\TU/TimesNewRoman(0)/m/n/14.4 выходная маска полностью сформирована и побайтно 
+совпадает с 
+[12]
+Underfull \hbox (badness 3291) in paragraph at lines 40--41
+[]\TU/TimesNewRoman(0)/m/n/14.4 Пусть $\OML/cmm/m/it/14.4 L \OT1/cmr/m/n/14.4 =
+ 256$ \TU/TimesNewRoman(0)/m/n/14.4 — число уровней яркости. Последовательная 
+
+Underfull \hbox (badness 1043) in paragraph at lines 45--47
+\TU/TimesNewRoman(0)/m/n/14.4 синхронизацию и завершение потоков. При $\OML/cmm
+/m/it/14.4 q$ \TU/TimesNewRoman(0)/m/n/14.4 больше числа доступных 
+
+Underfull \hbox (badness 3209) in paragraph at lines 45--47
+\TU/TimesNewRoman(0)/m/n/14.4 логических ядер все рабочие одновременно не испол
+няются, поэтому 
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+\TU/TimesNewRoman(0)/m/n/14.4 PGM с сигнатурой P5 и максимальным значением 255.
+ Нулевые 
+
+Underfull \hbox (badness 7925) in paragraph at lines 49--50
+\TU/TimesNewRoman(0)/m/n/14.4 размеры, переполнение размера, усечённый растр, л
+ишние байты и 
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[]|\TU/TimesNewRoman(0)/m/n/14.4 Нулевой размер, усечённый
+
+Underfull \hbox (badness 7397) in paragraph at lines 51--64
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для проверки выбраны изображения с заранее опре
+деляемыми 
+[13]) (docs/technology.tex [14]
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/TimesNewRoman(0)/m/n/14.4 потоков, мьютекса и условных переменных применяет
+ся интерфейс 
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/TimesNewRoman(0)/m/n/14.4 потоков POSIX в реализации winpthreads, поставляе
+мой с MSYS2. 
+
+Underfull \hbox (badness 6708) in paragraph at lines 3--4
+\TU/TimesNewRoman(0)/m/n/14.4 Использован компилятор GCC 14.2.0, среда UCRT64. 
+Измерительная 
+
+Underfull \hbox (badness 1009) in paragraph at lines 3--4
+\TU/TimesNewRoman(0)/m/n/14.4 сборка выполняется с параметрами \TU/TimesNewRoma
+n(1)/m/n/14.4 -std=c11 -O0 -Wall -Wextra -Wpedantic 
+
+Underfull \hbox (badness 3417) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/14.4 и доступной памятью. Это исключает переполнение с
+уммы яркостей. 
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/14.4 Критерий Оцу вычисляется с использованием веществ
+енного типа 
+
+Underfull \hbox (badness 5711) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/14.4 расширенной точности \TU/TimesNewRoman(1)/m/n/14.
+4 long double\TU/TimesNewRoman(0)/m/n/14.4 ; поэтому для практически равных 
+
+Underfull \hbox (badness 7151) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/14.4 максимумов на иных больших входах округление може
+т влиять на 
+
+Underfull \hbox (badness 1953) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/14.4 выбранный порог. В функциональных проверках совпа
+дение с точным 
+
+Underfull \hbox (badness 5331) in paragraph at lines 7--8
+[]\TU/TimesNewRoman(0)/m/n/14.4 Исходные тексты разделены на модули сегментации
+, обработки 
+
+Underfull \hbox (badness 3724) in paragraph at lines 10--14
+\TU/TimesNewRoman(0)/m/n/14.4 и его бинарная маска. Фантом составлен из эллипти
+ческих областей 
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
+\TU/TimesNewRoman(0)/m/n/14.4 двух диапазонов яркости с псевдослучайным шумом; 
+он служит 
+) (docs/research.tex [15] [16]
+Underfull \hbox (badness 7344) in paragraph at lines 12--13
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для каждого сочетания размера изображения и чис
+ла потоков 
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+\TU/TimesNewRoman(0)/m/n/14.4 выполнялось 100 повторений, после чего вычислялос
+ь среднее 
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+\TU/TimesNewRoman(0)/m/n/14.4 QueryPerformanceCounter [[]]. Создание, синхрониз
+ация и завершение 
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+\TU/TimesNewRoman(0)/m/n/14.4 рабочих потоков учитывались; генерация изображени
+я и файловый 
+
+Underfull \hbox (badness 1342) in paragraph at lines 14--15
+\TU/TimesNewRoman(0)/m/n/14.4 передавалось одно и то же изображение. Число рабо
+чих потоков $\OML/cmm/m/it/14.4 q \OMS/cmsy/m/n/14.4 2 
+(results/table_sizes.tex) [17]
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+[]\TU/TimesNewRoman(0)/m/n/14.4 На рисунке []6[] представлена зависимость време
+ни от размера 
+
+Underfull \hbox (badness 4366) in paragraph at lines 20--22
+\TU/TimesNewRoman(0)/m/n/14.4 изображения для всех исследованных конфигураций. 
+Обе оси имеют 
+(results/table_q.tex
+Underfull \hbox (badness 10000) in paragraph at lines 24--10
+[]\TU/TimesNewRoman(0)/m/n/14.4 Для изображения $\OT1/cmr/m/n/14.4 4096 \OMS/cm
+sy/m/n/14.4 ^^B \OT1/cmr/m/n/14.4 4096$ \TU/TimesNewRoman(0)/m/n/14.4 результат
+ы при разном числе 
+) [18]
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+[]\TU/TimesNewRoman(0)/m/n/14.4 При одном рабочем потоке параллельная версия ме
+дленнее 
+[19]) (docs/conclusion.tex
+Underfull \hbox (badness 2951) in paragraph at lines 36--1
+\TU/TimesNewRoman(0)/m/n/14.4 при восьми рабочих потоках: 73,955 мс, ускорение 
+1,79. Дальнейшее 
+[20]
+Underfull \hbox (badness 2042) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/14.4 единственного последовательного потока, диспетчер
+а и одного
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+[]\TU/TimesNewRoman(0)/m/n/14.4 выполнены реализации на языке Си11, проверены т
+иповые
+
+Underfull \hbox (badness 3386) in paragraph at lines 6--7
+\TU/TimesNewRoman(0)/m/n/14.4 и граничные случаи, совпадение результатов обеих 
+версий и
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+[]\TU/TimesNewRoman(0)/m/n/14.4 выполнены замеры реального времени для пяти раз
+меров
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+\TU/TimesNewRoman(0)/m/n/14.4 изображений, самостоятельной последовательной вер
+сии и
+
+Underfull \hbox (badness 3439) in paragraph at lines 8--9
+[]\TU/TimesNewRoman(0)/m/n/14.4 установлено, что для небольших входов параллель
+ная версия
+) [21]
+Underfull \hbox (badness 3792) in paragraph at lines 51--52
+\TU/TimesNewRoman(0)/m/n/14.4 инженеров электротехники и электроники по система
+м, человеку и
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+[]\TU/TimesNewRoman(0)/m/n/14.4 Открытая группа (The Open Group). Ожидание усло
+вной
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+\TU/TimesNewRoman(0)/m/n/14.4 URL: []$[][][][][] [] [] [] [][][][] [] [][][][][
+][][][][] [] [][][] [] [][][][][][][][][][] [] [][][][][][][][][][] [] [][][][]
+[][][][][] [] [][][][][][][] []
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+\TU/TimesNewRoman(0)/m/n/14.4 (QueryPerformanceCounter). URL: []$[][][][][] [] 
+[] [] [][][][][] [] [][][][][][][][][] [] [][][] [] [][][][][][] []
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+[][][][][][][] [] [][][][][] [] [][][] [] [][][][][][][][][][] [] [][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$[] \TU/TimesN
+ewRoman(0)/m/n/14.4 (дата
+(docs/appendices.tex [22]
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/14.4 В листинге []А.1[] «Интерфейс функций сегментации
+» приведены 
+(src/segmentation.h) [23] (src/segmentation.c [24] [25] [26]) [27]
+(results/table_all.tex
+Underfull \hbox (badness 4096) in paragraph at lines 13--1
+\TU/TimesNewRoman(0)/m/n/14.4 В таблице []Б.1[] представлены сводные результаты
+ всех конфигураций. 
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--1
+\TU/TimesNewRoman(0)/m/n/14.4 В столбце $\OML/cmm/m/it/14.4 q$ \TU/TimesNewRoma
+n(0)/m/n/14.4 обозначением «Послед.» отмечена самостоятельная 
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+[]|\TU/TimesNewRoman(0)/m/n/14.4 Станд.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--6
+[]|\TU/TimesNewRoman(0)/m/n/14.4 Станд.
+ignored error: Infinite glue shrinkage found in box being split [28])) [29]
+(C:\Users\Алексей\Documents\ChatGPT\Учеба 3\lab4_revision_1117\output\pdf\repor
+miktex-dvipdfmx: major issue: So far, you have not checked for MiKTeX updates.
+t.aux) )
+(see the transcript file for additional information)
+Output written on C:\Users\Алексей\Documents\ChatGPT\Учеба 3\lab4_revision_1117
+\output\pdf\report.pdf (29 pages).
+Transcript written on "C:\Users\Алексей\Documents\ChatGPT\Учеба 3\lab4_revision
+_1117\output\pdf\report.log".
+xelatex: major issue: So far, you have not checked for MiKTeX updates.

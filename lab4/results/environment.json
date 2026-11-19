@@ -1,0 +1,31 @@
+{
+  "measured_local_time": "2026-11-12T18:12:43.359934+03:00",
+  "cpu": "11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz",
+  "logical_processors": 4,
+  "physical_cores": 2,
+  "smt": "enabled",
+  "ram_bytes": 8319700992,
+  "available_ram_bytes": 450338816,
+  "os": "Windows-11-10.0.26200-SP0",
+  "compiler": "gcc (Rev2, Built by MSYS2 project) 14.2.0",
+  "flags": "-std=c11 -O0 -Wall -Wextra -Wpedantic -pthread",
+  "timer": "QueryPerformanceCounter, elapsed wall time",
+  "q": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "repetitions": 100,
+  "seed": 20261112,
+  "source_sha256": {
+    "src\\image.c": "0a157f9424c9b72adff209db74dd1c7e3ad363b7de0579dfda6e07f94ca59bcd",
+    "src\\main.c": "75c49e0924886082acbad5aff672e883827feb982795e7dc79cda80eff30c3d8",
+    "src\\segmentation.c": "c73c2a0491127ab423866210767c910f334015029b72c8df4356152b9ee7cf0c",
+    "src\\segmentation.h": "e163b0e8462d7e86693308adfd7970279b3ae1b77cc2c3ed686a2bb975dd61a1"
+  },
+  "executable_sha256": "6e4e3ccc4bc153d2407246015e188500ddb15820cb07e7391255d7c9cecc8b54",
+  "conditions": "Normal process priority; no affinity pinning; SMT and OS settings unchanged; concurrent desktop background tasks possible."
+}

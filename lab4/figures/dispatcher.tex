@@ -1,0 +1,21 @@
+\begin{tikzpicture}[node distance=7mm,terminator/.append style={minimum height=8mm},process/.append style={minimum height=8mm},data/.append style={minimum height=8mm},loop start/.append style={minimum height=10mm},loop end/.append style={minimum height=8mm}]
+\node[terminator] (a) {Начало};
+\node[data,below=of a] (b) {$I$, $N$, $q$};
+\node[process,below=of b] (c) {Выделить данные;\\$c\gets0$, $p\gets0$, $a\gets0$};
+\node[subroutine,below=of c] (d) {Назначить диапазоны;\\создать $q$ рабочих};
+\node[decision,below=of d] (e) {Все созданы?};
+\node[subroutine,below=7mm of e] (f) {Захватить мьютекс;\\ожидать $c=q$};
+\node[process,below=of f] (g) {$h[v]\gets\sum_{j=0}^{q-1}h_j[v]$\\для $v=0,\ldots,255$};
+\node[subroutine,below=of g] (h) {$T\gets\operatorname{Оцу}(h,N)$};
+\node[process,below=of h] (i) {$p\gets1$; разбудить всех;\\освободить мьютекс};
+\node[subroutine,below=of i] (j) {Ожидать всех рабочих;\\освободить данные};
+\node[terminator,below=of j] (k) {Вернуть $B$, $T$};
+\node[process,text width=34mm,minimum width=38mm,right=13mm of f] (x) {Под мьютексом:\\$a\gets1$;\\разбудить всех};
+\node[subroutine,text width=34mm,minimum width=38mm,below=8mm of x] (y) {Ожидать созданных; освободить данные};
+\node[terminator,text width=34mm,minimum width=38mm,below=8mm of y] (z) {Ошибка};
+\foreach \x/\y in {a/b,b/c,c/d,d/e,f/g,g/h,h/i,i/j,j/k,x/y,y/z}
+\draw[flow] (\x.south)--(\y.north);
+\draw[flow] (e.south)--node[right]{Да}(f.north);
+\draw[flow] (e.east)-|node[above,pos=.25]{Нет}(x.north);
+\end{tikzpicture}
+

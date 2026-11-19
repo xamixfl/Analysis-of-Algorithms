@@ -1,0 +1,19 @@
+\begin{tikzpicture}[node distance=7mm,terminator/.append style={minimum height=8mm},process/.append style={minimum height=8mm},data/.append style={minimum height=8mm},loop start/.append style={minimum height=10mm},loop end/.append style={minimum height=8mm}]
+\node[terminator] (a) {Начало рабочего $j$};
+\node[data,below=of a] (b) {$[b_j,e_j)$; $h_j[0..255]=0$};
+\node[loop start,below=of b] (c) {Цикл I\\$i=b_j,\ldots,e_j-1$};
+\node[process,below=of c] (d) {$h_j[I_i]\gets h_j[I_i]+1$};
+\node[loop end,below=of d] (e) {Цикл I};
+\node[subroutine,below=of e] (f) {Под мьютексом:\\$c\gets c+1$; уведомить;\\ждать $p=1$ или $a=1$};
+\node[process,below=of f] (g) {Скопировать $T$ и $a$;\\освободить мьютекс};
+\node[decision,below=of g] (h) {$a=1$?};
+\node[loop start,below=7mm of h] (i) {Цикл J\\$i=b_j,\ldots,e_j-1$};
+\node[process,below=of i] (j) {$B_i\gets255\cdot[I_i>T]$};
+\node[loop end,below=of j] (k) {Цикл J};
+\node[terminator,below=of k] (l) {Конец};
+\foreach \x/\y in {a/b,b/c,c/d,d/e,e/f,f/g,g/h,i/j,j/k,k/l}
+\draw[flow] (\x.south)--(\y.north);
+\draw[flow] (h.south)--node[right]{Нет}(i.north);
+\draw[flow] (h.east)--++(25mm,0) node[above,pos=.5]{Да}|-([yshift=5mm]l.north)--(l.north);
+\end{tikzpicture}
+

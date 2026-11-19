@@ -1,0 +1,56 @@
+\input{shared/preamble.tex}
+\usepackage{graphicx}
+\usetikzlibrary{shapes.misc,calc}
+\hypersetup{pdftitle={Лабораторная работа № 4. Параллельная сегментация изображений},pdfauthor={Понарин А. А.}}
+\tikzset{subroutine/.style={process,path picture={
+\draw ([xshift=2mm]path picture bounding box.north west)--([xshift=2mm]path picture bounding box.south west);
+\draw ([xshift=-2mm]path picture bounding box.north east)--([xshift=-2mm]path picture bounding box.south east);}},
+every node/.style={font=\normalsize}}
+\lstset{language=C,captionpos=b,breakatwhitespace=false,breakautoindent=false}
+\makeatletter
+\lst@AddToHook{Init}{\hyphenpenalty=0\relax\exhyphenpenalty=0\relax}
+\makeatother
+\setlength{\doublerulesep}{2pt}
+\setcounter{tocdepth}{2}
+\newcommand{\diagram}[3]{\begin{figure}[H]\centering\input{figures/#1.tex}\caption{#2}\label{#3}\end{figure}}
+\begin{document}
+\begin{titlepage}\thispagestyle{empty}
+\noindent\begin{minipage}[c]{0.15\textwidth}\includegraphics[width=\linewidth]{b_logo.jpg}\end{minipage}\hfill
+\begin{minipage}[c]{0.83\textwidth}\centering\small
+Министерство науки и высшего образования Российской Федерации\\
+Федеральное государственное автономное образовательное учреждение\\высшего образования\\
+«Московский государственный технический университет\\имени Н.~Э.~Баумана\\(национальный исследовательский университет)»\\
+(МГТУ им. Н.~Э.~Баумана)
+\end{minipage}
+\par\vspace{4mm}\noindent\rule{\dimexpr\linewidth-1mm\relax}{1pt}\par\vspace{10mm}
+\noindent ФАКУЛЬТЕТ «Информатика и системы управления»\\[4mm]
+КАФЕДРА «Программная инженерия»
+\vspace{23mm}
+\begin{center}\Large\bfseries Лабораторная работа № 4\\[3mm]
+по дисциплине «Анализ алгоритмов»\end{center}
+\vspace{17mm}
+\noindent Тема: «Последовательная и параллельная сегментация полутоновых изображений методом Оцу»
+\par\vspace{15mm}
+\noindent Студент: Понарин А.~А.\\[4mm]
+Группа: ИУ7-55Б\\[4mm]
+Преподаватели: Волкова Л.~Л., Строганов Д.~В.
+\vfill\begin{center}2026~г.\end{center}
+\end{titlepage}
+\setcounter{page}{2}
+\clearpage\tableofcontents
+\input{docs/introduction.tex}
+\input{docs/analysis.tex}
+\input{docs/design.tex}
+\input{docs/technology.tex}
+\input{docs/research.tex}
+\input{docs/conclusion.tex}
+\clearpage
+\renewcommand{\refname}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\phantomsection\addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\begin{thebibliography}{3}
+\bibitem{otsu} Оцу Н. Метод выбора порога по гистограммам уровней серого (A Threshold Selection Method from Gray-Level Histograms) // Труды Института инженеров электротехники и электроники по системам, человеку и кибернетике (IEEE Transactions on Systems, Man, and Cybernetics). 1979. Т. SMC-9, № 1. С. 62--66. DOI: \href{https://doi.org/10.1109/TSMC.1979.4310076}{10.1109/TSMC.1979.4310076}.
+\bibitem{posix} Открытая группа (The Open Group). Ожидание условной переменной (pthread\_cond\_wait) // Базовые спецификации, выпуск 8, 2024. URL: \url{https://pubs.opengroup.org/onlinepubs/9799919799/functions/pthread_cond_wait.html} (дата обращения: 12.11.2026).
+\bibitem{timer} Майкрософт (Microsoft). Функция счётчика высокой точности (QueryPerformanceCounter). URL: \url{https://learn.microsoft.com/en-us/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter} (дата обращения: 12.11.2026).
+\end{thebibliography}
+\input{docs/appendices.tex}
+\end{document}

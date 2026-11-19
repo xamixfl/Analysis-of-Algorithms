@@ -1,0 +1,14 @@
+\structuralpart{ПРИЛОЖЕНИЕ А}
+\begin{center}Основные исходные тексты\end{center}
+\renewcommand{\thelstlisting}{А.\arabic{lstlisting}}
+\setcounter{lstlisting}{0}
+В листинге~\ref{lst:api} «Интерфейс функций сегментации» приведены объявления типов и функций. В листинге~\ref{lst:implementation} «Реализация метода Оцу и управления потоками» приведён исходный код вычислительного модуля, использованного при тестировании и измерениях.
+\lstinputlisting[caption={Интерфейс функций сегментации},label={lst:api}]{src/segmentation.h}
+\clearpage
+\lstinputlisting[caption={Реализация метода Оцу и управления потоками},label={lst:implementation}]{src/segmentation.c}
+
+\structuralpart{ПРИЛОЖЕНИЕ Б}
+\begin{center}Полные результаты измерений\end{center}
+\renewcommand{\thetable}{Б.\arabic{table}}\setcounter{table}{0}
+В таблице~\ref{tab:all} представлены сводные результаты всех конфигураций. В столбце $q$ обозначением «Послед.» отмечена самостоятельная последовательная реализация. Для каждой строки учтено 100 измерений, время приведено в миллисекундах. Минимум и максимум характеризуют отдельные вызовы, а не доверительный интервал среднего.
+\input{results/table_all.tex}
