@@ -1,0 +1,2 @@
+PASS: 20 independent optimum cases; 6 malformed inputs; budget, open path,
+sparse graph, failed ant search and reproducibility checks.

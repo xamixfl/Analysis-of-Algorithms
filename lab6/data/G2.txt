@@ -1,0 +1,9 @@
+8 165
+Lisbon Southampton Rotterdam Reykjavik Halifax Boston New_York Norfolk
+118 10  102 38  31 41  42 44  72 21  120 43  41 42
+35 47  37 44  68 24  41 18  69 35  78 22
+97 12  70 37  36 22  32 41  28 19
+75 15  54 42  83 50  85 34
+28 14  55 20  24 21
+69 38  51 30
+108 50

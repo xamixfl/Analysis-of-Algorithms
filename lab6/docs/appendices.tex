@@ -1,0 +1,41 @@
+\appendixpart{app:grid}
+\setcounter{table}{0}
+\renewcommand{\thetable}{А.\arabic{table}}
+\begin{center}\textbf{Результаты параметризации}\end{center}
+
+Все значения отклонений приведены в процентах. В последнем столбце дан максимум по классу графов. Для каждого графа и сочетания параметров проведено по 20 запусков.
+
+\begin{table}[H]\centering
+\caption{Результаты для всех комбинаций параметров}
+\label{tab:grid}
+{\small\setstretch{1.05}\setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}rrr rrrrrrr@{}}
+\toprule
+ &&& \multicolumn{2}{c}{$G_1$} & \multicolumn{2}{c}{$G_2$} & \multicolumn{2}{c}{$G_3$} & Класс \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+$\alpha$ & $\beta$ & $\rho$ &
+$\delta_{\max}$ & $\widetilde\delta$ &
+$\delta_{\max}$ & $\widetilde\delta$ &
+$\delta_{\max}$ & $\widetilde\delta$ & $\delta_{\max}$ \\
+\midrule
+\tablerows{results/parameters.tex}
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\appendixpart{app:graphs}
+\setcounter{lstlisting}{0}
+\renewcommand{\thelstlisting}{Б.\arabic{lstlisting}}
+\begin{center}\textbf{Исходные данные параметризации}\end{center}
+
+Первая строка каждого файла содержит число портов и бюджет, вторая --- имена портов. Последующие строки содержат пары «время, стоимость» для $i<j$, в порядке возрастания $i$, затем $j$.
+
+\lstinputlisting[language={},numbers=none,xleftmargin=0mm,linewidth=\linewidth,
+basicstyle=\ttfamily\footnotesize\setstretch{1.15},
+caption={Исходные данные графа $G_1$}]{data/G1.txt}
+\lstinputlisting[language={},numbers=none,xleftmargin=0mm,linewidth=\linewidth,
+basicstyle=\ttfamily\footnotesize\setstretch{1.15},
+caption={Исходные данные графа $G_2$}]{data/G2.txt}
+\lstinputlisting[language={},numbers=none,xleftmargin=0mm,linewidth=\linewidth,
+basicstyle=\ttfamily\footnotesize\setstretch{1.15},
+caption={Исходные данные графа $G_3$}]{data/G3.txt}

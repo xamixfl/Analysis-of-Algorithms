@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1mm,y=1mm]
+\node[terminator] (start) at (0,0) {Начало};
+\node[block] (init) at (0,-15) {$\tau\gets1$, $d\gets0$\\Сбросить лучший маршрут};
+\node[ask] (outer) at (0,-34) {$d<D$?};
+\node[block] (reset) at (0,-53) {$\Delta\gets0$, $k\gets0$};
+\node[ask] (inner) at (0,-72) {$k<K$?};
+\node[block] (walk) at (0,-91) {Построить маршрут муравья};
+\node[block] (deposit) at (0,-111) {Добавить вклад успешного пути\\Обновить лучший путь};
+\node[block] (increment) at (0,-129) {$k\gets k+1$};
+\node[note] (elite) at (60,-72) {Добавить в $\Delta$\\элитный вклад\\при наличии пути};
+\node[note] (update) at (60,-51) {Обновить $\tau$\\$d\gets d+1$};
+\node[note] (return) at (-57,-34) {Вернуть лучший\\путь или признак\\отсутствия};
+\node[terminator,minimum width=32mm] (end) at (-57,-15) {Конец};
+\draw[arrow] (start)--(init);
+\draw[arrow] (init)--(outer);
+\draw[arrow] (outer.west)--node[answer,above]{нет}(return.east);
+\draw[arrow] (return)--(end);
+\draw[arrow] (outer.south)--node[answer,left]{да}(reset.north);
+\draw[arrow] (reset)--(inner);
+\draw[arrow] (inner.south)--node[answer,left]{да}(walk.north);
+\draw[arrow] (inner.east)--node[answer,above]{нет}(elite.west);
+\draw[arrow] (walk)--(deposit);
+\draw[arrow] (deposit)--(increment);
+\draw[arrow] (increment.west)--(-43,-129)|-(inner.west);
+\draw[arrow] (elite)--(update);
+\draw[arrow] (update.north)|-(outer.east);
+\end{tikzpicture}

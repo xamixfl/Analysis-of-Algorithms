@@ -1,0 +1,4 @@
+graph,budget,method,trial,seed,time_ns,status,hours,cost,path
+G1,165,exact,1,1,793300,ok,301,153,Auckland -> Busan -> Los_Angeles -> Yokohama -> Singapore -> Sydney -> Shanghai -> Honolulu
+G2,165,exact,1,1,583900,ok,302,164,Reykjavik -> Lisbon -> Southampton -> Boston -> Halifax -> Norfolk -> Rotterdam -> New_York
+G3,165,exact,1,1,1263200,ok,263,162,Cape_Town -> Mombasa -> Port_Louis -> Mumbai -> Male -> Colombo -> Durban -> Maputo

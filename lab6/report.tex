@@ -1,0 +1,88 @@
+\input{shared/preamble.tex}
+\setmonofont{Consolas}
+\usepackage{amssymb}
+\hyphenpenalty=100
+\exhyphenpenalty=100
+\hypersetup{pdftitle={Лабораторная работа № 6. Задача коммивояжёра},
+  pdfauthor={Понарин А. А.}}
+\setcounter{tocdepth}{2}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\AtBeginDocument{\counterwithin{lstlisting}{section}}
+\lstset{language=C++,basicstyle=\ttfamily\small\setstretch{1},
+  numberstyle=\rmfamily\footnotesize,captionpos=b,breakatwhitespace=false}
+\newcommand{\diagram}[3]{%
+  \begin{figure}[H]\centering\input{figures/#1.tex}%
+  \caption{#2}\label{#3}\end{figure}}
+
+\newcommand{\flowchart}[3]{%
+  \begin{figure}[H]\centering\scalebox{0.86}{\input{figures/#1.tex}}%
+  \caption{#2}\label{#3}\end{figure}}
+\makeatletter
+\newcommand{\tablerows}[1]{\@@input #1 }
+\makeatother
+\newcounter{appendixpart}
+\renewcommand{\theappendixpart}{\ifcase\value{appendixpart}\or А\or Б\fi}
+\newcommand{\appendixpart}[1]{%
+  \clearpage\refstepcounter{appendixpart}%
+  \section*{ПРИЛОЖЕНИЕ \theappendixpart}\label{#1}%
+  \addcontentsline{toc}{section}{ПРИЛОЖЕНИЕ \theappendixpart}}
+\tikzset{
+    block/.style={process,minimum width=67mm,text width=64mm},
+    ask/.style={decision,minimum width=67mm,minimum height=17mm,aspect=4},
+    arrow/.style={flow},
+    answer/.style={fill=white,inner sep=2pt,font=\footnotesize},
+    note/.style={draw,rectangle,align=center,text width=33mm,inner sep=3pt}
+}
+\input{results/statistics.tex}
+
+\begin{document}
+\begin{titlepage}\thispagestyle{empty}
+\noindent\begin{minipage}[c]{0.15\textwidth}
+\includegraphics[width=\linewidth]{b_logo.jpg}\end{minipage}\hfill
+\begin{minipage}[c]{0.83\textwidth}\centering\small
+Министерство науки и высшего образования Российской Федерации\\
+Федеральное государственное автономное образовательное учреждение\\
+высшего образования\\
+«Московский государственный технический университет\\имени Н.~Э.~Баумана\\
+(национальный исследовательский университет)»\\
+(МГТУ им. Н.~Э.~Баумана)
+\end{minipage}
+\par\vspace{4mm}\noindent\rule{\dimexpr\linewidth-1mm\relax}{1pt}\par\vspace{10mm}
+\noindent ФАКУЛЬТЕТ «Информатика и системы управления»\\[4mm]
+КАФЕДРА «Программная инженерия»
+\vspace{23mm}
+\begin{center}\Large\bfseries Лабораторная работа № 6\\[3mm]
+по дисциплине «Анализ алгоритмов»\end{center}
+\vspace{17mm}
+\noindent\textbf{Тема} «Решение задачи коммивояжёра полным перебором и муравьиным алгоритмом»
+\par\vspace{15mm}
+\noindent\textbf{Студент} Понарин А.~А.\\[4mm]
+\textbf{Группа} ИУ7-55Б\\[4mm]
+\textbf{Преподаватели} Волкова Л.~Л., Строганов Д.~В.
+\vfill\begin{center}2026~г.\end{center}
+\end{titlepage}
+
+\setcounter{page}{2}
+\tableofcontents
+\input{docs/introduction.tex}
+\input{docs/analysis.tex}
+\input{docs/design.tex}
+\input{docs/technology.tex}
+\input{docs/research.tex}
+\input{docs/conclusion.tex}
+
+\clearpage
+\renewcommand{\refname}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\phantomsection\addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\begin{thebibliography}{9}
+\bibitem{ant}
+Dorigo M., Maniezzo V., Colorni A. Ant System: Optimization by a Colony of Cooperating Agents //
+IEEE Transactions on Systems, Man, and Cybernetics. Part B (Cybernetics).
+1996. Vol.~26, no.~1. P.~29--41.
+DOI \href{https://doi.org/10.1109/3477.484436}{10.1109/3477.484436}.
+\end{thebibliography}
+
+\input{docs/appendices.tex}
+\end{document}

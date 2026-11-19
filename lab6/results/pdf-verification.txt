@@ -1,0 +1,4 @@
+PASS: XeLaTeX compiled 22 pages. Final log has no unresolved references, missing glyphs or overflow warnings.
+PASS: pdftoppm rendered all pages. The layout, numbered sections, tables and updated diagrams were visually reviewed.
+PASS: pdftotext confirmed the table of contents, cross-references and the presence of the parameterization appendix.
+SHA-256: A3C0F50C8086C810CCE46094C3B8BCD6DBB23C4917503AB71B4B8F8AC273E0BA

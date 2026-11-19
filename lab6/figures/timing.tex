@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+\begin{semilogyaxis}[
+  width=0.98\linewidth,height=77mm,
+  xmin=4.7,xmax=11.3,ymin=1,ymax=3000000,
+  xlabel={Число портов, $n$},ylabel={Медианное время, мкс},
+  xtick={5,6,7,8,9,10,11},
+  ytick={1,10,100,1000,10000,100000,1000000},
+  grid=major,major grid style={gray!30},
+  legend pos=north west,legend cell align=left,
+  legend style={draw=black,fill=white,font=\small},
+  tick label style={font=\small},label style={font=\small}]
+\addplot[black,thick,mark=*] table[x=n,y=exact]{results/benchmark_plot.dat};
+\addlegendentry{Полный перебор}
+\addplot[black,thick,dashed,mark=square*] table[x=n,y=ant]{results/benchmark_plot.dat};
+\addlegendentry{Муравьиный алгоритм}
+\end{semilogyaxis}
+\end{tikzpicture}
