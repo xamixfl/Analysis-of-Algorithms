@@ -18,6 +18,8 @@ try {
     $testOutput | Write-Output
 
     if ($Benchmark) {
+        & python scripts/graphs.py
+        if ($LASTEXITCODE -ne 0) { throw 'Graph generation failed' }
         & python scripts/experiment.py --compiler $Compiler
         if ($LASTEXITCODE -ne 0) { throw 'Experiment failed' }
     }
@@ -30,7 +32,7 @@ try {
             & xelatex -interaction=nonstopmode -halt-on-error -output-directory=build report.tex
             if ($LASTEXITCODE -ne 0) { throw 'PDF build failed' }
         }
-        Copy-Item -LiteralPath build/report.pdf -Destination 'output/pdf/ИУ7-55Б-Понарин-ЛР6-АА.pdf'
+        Copy-Item -LiteralPath build/report.pdf -Destination 'output/pdf/report.pdf'
     }
 } finally {
     Pop-Location

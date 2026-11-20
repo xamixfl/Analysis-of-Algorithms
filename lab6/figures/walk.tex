@@ -1,27 +1,37 @@
 \begin{tikzpicture}[x=1mm,y=1mm]
 \node[terminator] (start) at (0,0) {Начало};
-\node[block] (init) at (0,-15) {Случайно выбрать начало\\$s\gets0$, $L\gets0$};
-\node[ask] (done) at (0,-35) {Посещены $n$ портов?};
-\node[block] (candidates) at (0,-54) {Просмотреть вершины\\Составить $S_i$ и вычислить веса};
-\node[ask] (empty) at (0,-75) {$S_i=\varnothing$?};
-\node[block] (choice) at (0,-96) {Применить формулу~\eqref{eq:probability}\\Выбрать порт $j$, $s\gets s+c_{ij}$};
-\node[ask] (budget) at (0,-117) {$s>B$?};
-\node[block] (append) at (0,-137) {Добавить $j$ в маршрут\\$L\gets L+t_{ij}$, $i\gets j$};
-\node[note] (return) at (59,-35) {Вернуть маршрут\\с временем $L$\\и затратами $s$};
-\node[note] (reject) at (59,-96) {Вернуть признак неудачной попытки};
-\node[terminator,minimum width=32mm] (success) at (59,-15) {Конец};
-\node[terminator,minimum width=32mm] (failure) at (59,-137) {Конец};
-\draw[arrow] (start)--(init);
-\draw[arrow] (init)--(done);
-\draw[arrow] (done.east)--node[answer,above]{да}(return.west);
-\draw[arrow] (return)--(success);
+\node[block] (init) at (0,-14) {Случайно выбрать порт $i$\\$s\gets0$, $L\gets0$};
+\node[connector] (repeatIn) at (-45,-25) {А};
+\coordinate (doneIn) at (0,-25);
+\node[ask] (done) at (0,-36) {Посещены $n$ портов?};
+\node[result,minimum width=46mm,text width=41mm] (return) at (65,-50)
+    {Маршрут $P$\\Время $L$, затраты $s$};
+\node[terminator,minimum width=43mm] (success) at (65,-64) {Конец};
+\node[block] (candidates) at (0,-54) {Составить $S_i$\\и вычислить веса рёбер};
+\node[ask] (empty) at (0,-73) {$S_i=\varnothing$?};
+\node[block] (choice) at (0,-93) {Выбрать $j$ по формуле~\eqref{eq:probability}\\$s\gets s+c_{ij}$};
+\node[ask] (budget) at (0,-112) {$s>B$?};
+\node[block] (append) at (0,-131) {Добавить $j$ в маршрут\\$L\gets L+t_{ij}$, $i\gets j$};
+\node[connector] (repeatOut) at (0,-146) {А};
+\coordinate (rejectIn) at (65,-112);
+\node[result,minimum width=46mm,text width=41mm] (reject) at (65,-127)
+    {Признак неудачной\\попытки};
+\node[terminator,minimum width=43mm] (failure) at (65,-143) {Конец};
+
+\draw[arrow] (start.south)--(init.north);
+\draw[flow line] (init.south)--(doneIn);
+\draw[flow line] (repeatIn.east)--(doneIn);
+\draw[arrow] (doneIn)--(done.north);
+\draw[arrow] (done.east)--node[answer,above]{да}(return.north |- done.east)--(return.north);
+\draw[arrow] (return.south)--(success.north);
 \draw[arrow] (done.south)--node[answer,left]{нет}(candidates.north);
-\draw[arrow] (candidates)--(empty);
-\draw[arrow] (empty.east)--node[answer,above]{да}(59,-75)--(reject.north);
+\draw[arrow] (candidates.south)--(empty.north);
+\draw[flow line] (empty.east)--node[answer,above]{да}(rejectIn |- empty.east)--(rejectIn);
 \draw[arrow] (empty.south)--node[answer,left]{нет}(choice.north);
-\draw[arrow] (choice)--(budget);
-\draw[arrow] (budget.east)--node[answer,above]{да}(59,-117)--(reject.south);
+\draw[arrow] (choice.south)--(budget.north);
+\draw[flow line] (budget.east)--node[answer,above]{да}(rejectIn);
+\draw[arrow] (rejectIn)--(reject.north);
+\draw[arrow] (reject.south)--(failure.north);
 \draw[arrow] (budget.south)--node[answer,left]{нет}(append.north);
-\draw[arrow] (append.west)--(-44,-137)|-(done.west);
-\draw[arrow] (reject.east)--(81,-96)|-(failure.east);
+\draw[arrow] (append.south)--(repeatOut.north);
 \end{tikzpicture}

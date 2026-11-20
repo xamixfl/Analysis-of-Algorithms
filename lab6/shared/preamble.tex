@@ -10,7 +10,7 @@
 \usepackage{setspace}
 \usepackage{indentfirst}
 \usepackage{amsmath}
-\usepackage{booktabs}
+\usepackage{multirow}
 \usepackage{hhline}
 \usepackage{longtable}
 \usepackage{array}
@@ -45,10 +45,10 @@
 \displaywidowpenalty=10000
 \setlength{\rightskip}{0.5mm}
 \AtBeginDocument{%
-    \setlength{\abovedisplayskip}{0pt}%
-    \setlength{\abovedisplayshortskip}{0pt}%
-    \setlength{\belowdisplayskip}{0pt}%
-    \setlength{\belowdisplayshortskip}{0pt}%
+    \setlength{\abovedisplayskip}{\baselineskip}%
+    \setlength{\abovedisplayshortskip}{\baselineskip}%
+    \setlength{\belowdisplayskip}{\baselineskip}%
+    \setlength{\belowdisplayshortskip}{\baselineskip}%
 }
 \hypersetup{
     hidelinks,
@@ -85,12 +85,14 @@
 
 \newcommand{\structuralpart}[1]{%
     \clearpage
-    \section*{#1}%
     \phantomsection
+    \section*{#1}%
     \addcontentsline{toc}{section}{#1}%
 }
 
-\captionsetup{labelsep=endash}
+\DeclareCaptionLabelSeparator{gostdash}{\space\textemdash\space}
+\DeclareCaptionFont{nobreakwords}{\hyphenpenalty=10000\relax\exhyphenpenalty=10000\relax}
+\captionsetup{labelsep=gostdash,font={singlespacing,nobreakwords}}
 \captionsetup[figure]{name=Рисунок,justification=centering}
 \captionsetup[table]{name=Таблица,justification=raggedright,
     singlelinecheck=false,skip=2pt}
@@ -120,24 +122,8 @@
     {\def\@noitemerr
          {\@latex@warning{Empty `thebibliography' environment}}%
      \endlist}
-\renewcommand*\l@section[2]{%
-    \ifnum\c@tocdepth>\z@
-        \addpenalty\@secpenalty
-        \addvspace{.5em \@plus\p@}%
-        \setlength\@tempdima{\dimexpr\parindent+1.5em\relax}%
-        \begingroup
-        \parindent\z@ \rightskip\@pnumwidth
-        \parfillskip-\@pnumwidth
-        \leavevmode\bfseries
-        \advance\leftskip\@tempdima
-        \hskip-\leftskip
-        \hspace*{1.25cm}%
-        #1\nobreak\hfil\nobreak
-        \hb@xt@\@pnumwidth{\hss #2}\par
-        \endgroup
-    \fi}
-\renewcommand*\l@subsection[2]{%
-    \@dottedtocline{2}{1.25cm}{2.8em}{#1}{#2}}
+\renewcommand*\l@section{\@dottedtocline{1}{0pt}{1.25cm}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{1.25cm}{2.8em}}
 \makeatother
 
 \lstset{

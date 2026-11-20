@@ -5,7 +5,9 @@ from itertools import product
 import math
 import os
 import platform
+from pathlib import Path
 from statistics import median
+from tempfile import TemporaryDirectory
 import subprocess
 
 from graphs import DATA, ROOT, evaluate, read_graph
@@ -17,6 +19,16 @@ PARAM_REPEATS = 20
 BENCH_REPEATS = 7
 ITERATIONS = 32
 ANTS = 12
+G1_PORT_NAMES = {
+    "Auckland": "Окленд",
+    "Busan": "Пусан",
+    "Los_Angeles": "Лос-Анджелес",
+    "Yokohama": "Йокогама",
+    "Singapore": "Сингапур",
+    "Sydney": "Сидней",
+    "Shanghai": "Шанхай",
+    "Honolulu": "Гонолулу",
+}
 GRID = tuple(product((0, 1, 2), (0, 1, 3), (0.2, 0.5, 0.8)))
 
 
@@ -125,7 +137,36 @@ def tex_rows(filename, rows):
                                             for row in rows), encoding="utf8")
 
 
+def solve_without_budget(graph_id):
+    path = DATA / f"{graph_id}.txt"
+    names, _, weights = read_graph(path)
+    max_cost = max(cost for _, cost in weights.values())
+    lines = path.read_text(encoding="ascii").splitlines()
+    lines[0] = f"{len(names)} {(len(names) - 1) * max_cost}"
+    with TemporaryDirectory() as folder:
+        unrestricted = Path(folder) / path.name
+        unrestricted.write_text("\n".join(lines) + "\n", encoding="ascii")
+        row, = solve(unrestricted, "exact")
+    assert row["status"] == "ok"
+    return row
+
+
+def write_route_tex(reference):
+    _, _, edges = read_graph(DATA / f"{reference['graph']}.txt")
+    ports = reference["path"].split(" -> ")
+    assert len(ports) == 8
+    names = [G1_PORT_NAMES.get(port, port.replace("_", " ")) for port in ports]
+    labels = [r"$%d;\,%d$" % edges[a, b] for a, b in zip(ports, ports[1:])]
+    macros = [("RoutePort", names), ("RouteLeg", labels)]
+    (RESULTS / "reference_route.tex").write_text("".join(
+        rf"\newcommand\{prefix}{letter}{{{value}}}" + "\n"
+        for prefix, values in macros for letter, value in zip("ABCDEFGH", values)
+    ), encoding="utf8")
+
+
 def write_tex(grid, references, best, times):
+    write_route_tex(references[0])
+    unrestricted = [solve_without_budget(name) for name in GRAPH_IDS]
     tex_rows("parameters.tex", (
         [row["alpha"], row["beta"], percent(row["rho"]),
          *(percent(row[f"{name}_{key}"]) for name in GRAPH_IDS for key in ("max", "median")),
@@ -165,6 +206,8 @@ def write_tex(grid, references, best, times):
         "SpeedupLargest": percent(times[-1]["exact_us"] / times[-1]["ant_us"], 1),
         "LastExact": percent(times[-1]["exact_us"] / 1000, 2),
         "LastAnt": percent(times[-1]["ant_us"] / 1000, 2),
+        "UnboundedHours": ", ".join(row["hours"] for row in unrestricted[:-1]) + " и " + unrestricted[-1]["hours"],
+        "UnboundedCost": ", ".join(row["cost"] for row in unrestricted[:-1]) + " и " + unrestricted[-1]["cost"],
     }
     (RESULTS / "statistics.tex").write_text(
         "".join(rf"\newcommand\{key}{{{value}}}" + "\n" for key, value in values.items()),

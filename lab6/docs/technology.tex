@@ -41,10 +41,10 @@
 \begin{table}[H]\centering
 \caption{Примеры проверок}
 \label{tab:cases}
-\begin{tabularx}{\linewidth}{@{}p{0.58\linewidth}X@{}}
-\toprule
-Входные данные & Ожидаемый результат \\
-\midrule
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{0.57\linewidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\firsttabhead{Входные данные} & \tabhead{Ожидаемый результат} \\
+\hline
 Один порт, $B=0$ & $L=0$, $C=0$ \\
 Одно ребро $(4,9)$, $B=9$ & $L=4$, $C=9$ \\
 Треугольник с рёбрами $(1,8)$, $(6,2)$, $(2,2)$, $B=4$ & $L=8$, $C=4$ \\
@@ -52,7 +52,7 @@
 Цепь с рёбрами $(5,3)$ и $(7,4)$, $B=100$ & $L=12$, $C=7$ \\
 Граф с изолированным портом & Допустимых маршрутов нет \\
 Указанный треугольник, $B=3$ & Допустимых маршрутов нет \\
-\bottomrule
+\hline
 \end{tabularx}
 \end{table}
 

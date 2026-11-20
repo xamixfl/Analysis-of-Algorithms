@@ -1,22 +1,21 @@
-\begin{tikzpicture}[x=1mm,y=1mm,
-  port/.style={draw,rounded corners=2pt,minimum width=28mm,
-  minimum height=8mm,align=center},
-  metric/.style={fill=white,inner sep=1pt,font=\footnotesize}]
-\node[port] (a) at (0,0) {Окленд};
-\node[port] (b) at (42,0) {Пусан};
-\node[port] (c) at (84,0) {Лос-Анджелес};
-\node[port] (d) at (126,0) {Йокогама};
-\node[port] (e) at (126,-24) {Сингапур};
-\node[port] (f) at (84,-24) {Сидней};
-\node[port] (g) at (42,-24) {Шанхай};
-\node[port] (h) at (0,-24) {Гонолулу};
-\draw[arrow] (a)--node[metric,above]{$87;10$}(b);
-\draw[arrow] (b)--node[metric,above]{$37;27$}(c);
-\draw[arrow] (c)--node[metric,above]{$55;47$}(d);
-\draw[arrow] (d)--node[metric,left]{$24;12$}(e);
-\draw[arrow] (e)--node[metric,above]{$32;15$}(f);
-\draw[arrow] (f)--node[metric,above]{$29;32$}(g);
-\draw[arrow] (g)--node[metric,above]{$37;10$}(h);
-\node[font=\footnotesize] at (63,-37)
-  {Метки показывают часы перехода и затраты в условных денежных единицах};
+\input{results/reference_route.tex}
+\begin{tikzpicture}[x=1mm,y=1mm, port/.style={draw,rounded corners=2pt,
+  minimum width=39mm,minimum height=8mm,align=center},
+  metric/.style={inner sep=1pt,font=\footnotesize}]
+\node[port] (a) at (0,0) {\RoutePortA};
+\node[port] (b) at (0,-14) {\RoutePortB};
+\node[port] (c) at (0,-28) {\RoutePortC};
+\node[port] (d) at (0,-42) {\RoutePortD};
+\node[port] (e) at (91,0) {\RoutePortE};
+\node[port] (f) at (91,-14) {\RoutePortF};
+\node[port] (g) at (91,-28) {\RoutePortG};
+\node[port] (h) at (91,-42) {\RoutePortH};
+\draw[arrow] (a.south)--node[metric,right]{\RouteLegA}(b.north);
+\draw[arrow] (b.south)--node[metric,right]{\RouteLegB}(c.north);
+\draw[arrow] (c.south)--node[metric,right]{\RouteLegC}(d.north);
+\draw[arrow] (d.east)--(46,-42)--(46,9)
+    --node[metric,above]{\RouteLegD}(91,9)--(e.north);
+\draw[arrow] (e.south)--node[metric,right]{\RouteLegE}(f.north);
+\draw[arrow] (f.south)--node[metric,right]{\RouteLegF}(g.north);
+\draw[arrow] (g.south)--node[metric,right]{\RouteLegG}(h.north);
 \end{tikzpicture}

@@ -1,19 +1,29 @@
 \begin{tikzpicture}[x=1mm,y=1mm]
 \node[terminator] (start) at (0,0) {Начало};
-\node[block] (init) at (0,-15) {Перестановка $P\gets(0,\ldots,n-1)$\\Сбросить лучший маршрут};
-\node[block] (score) at (0,-33) {Проверить рёбра $P$ до конца пути\\или до нарушения ограничения};
-\node[ask] (better) at (0,-52) {$P$ допустим и лучше?};
-\node[note] (save) at (59,-52) {Сохранить $P$};
-\node[ask] (next) at (0,-74) {Есть следующая перестановка?};
-\node[block] (return) at (0,-93) {Вернуть сохранённый маршрут\\или признак отсутствия решения};
-\node[terminator] (end) at (0,-108) {Конец};
-\draw[arrow] (start)--(init);
-\draw[arrow] (init)--(score);
-\draw[arrow] (score)--(better);
-\draw[arrow] (better.east)--node[answer,above]{да}(save.west);
-\draw[arrow] (save.south) |- (0,-63);
-\draw[arrow] (better.south)--node[answer,left]{нет}(next.north);
-\draw[arrow] (next.west)--node[answer,above]{да}(-47,-74)|-(score.west);
+\node[block] (init) at (0,-15) {$P\gets(0,\ldots,n-1)$\\Сбросить лучший маршрут};
+\node[connector] (repeatIn) at (-45,-27) {А};
+\coordinate (scoreIn) at (0,-27);
+\node[block] (score) at (0,-37) {Оценить рёбра $P$\\до конца пути или до отказа};
+\node[ask] (better) at (0,-56) {$P$ допустим и лучше?};
+\node[side block] (save) at (65,-69) {Сохранить $P$};
+\coordinate (nextIn) at (0,-79);
+\node[ask] (next) at (0,-91) {Есть следующая\\перестановка?};
+\node[side block] (advance) at (65,-106) {Перейти к следующей\\перестановке};
+\node[connector] (repeatOut) at (65,-121) {А};
+\node[result] (return) at (0,-112) {Лучший маршрут\\или признак отсутствия};
+\node[terminator] (end) at (0,-128) {Конец};
+
+\draw[arrow] (start.south)--(init.north);
+\draw[flow line] (init.south)--(scoreIn);
+\draw[flow line] (repeatIn.east)--(scoreIn);
+\draw[arrow] (scoreIn)--(score.north);
+\draw[arrow] (score.south)--(better.north);
+\draw[arrow] (better.east)--node[answer,above]{да}(save.north |- better.east)--(save.north);
+\draw[flow line] (better.south)--node[answer,left]{нет}(nextIn);
+\draw[flow line] (save.south) |- (nextIn);
+\draw[arrow] (nextIn)--(next.north);
+\draw[arrow] (next.east)--node[answer,above]{да}(advance.north |- next.east)--(advance.north);
+\draw[arrow] (advance.south)--(repeatOut.north);
 \draw[arrow] (next.south)--node[answer,left]{нет}(return.north);
-\draw[arrow] (return)--(end);
+\draw[arrow] (return.south)--(end.north);
 \end{tikzpicture}
