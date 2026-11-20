@@ -1,0 +1,18 @@
+\begin{tikzpicture}[node distance=5mm]
+\node[endstep] (start) {Начало};
+\node[opbox,below=of start] (pop) {Извлечь заявку. Ждать,\\пока очередь открыта и пуста};
+\node[check,below=of pop] (found) {Есть заявка?};
+\node[opbox,below=of found] (operation) {Выполнить операцию ОУ,\\если у заявки нет ошибки};
+\node[opbox,below=of operation] (forward)
+  {Передать заявку дальше\\или завершить обработку\\и освободить буфер};
+\node[opbox,right=16mm of found,text width=36mm,minimum width=40mm] (close)
+  {Закрыть выходную очередь,\\если она есть};
+\node[endstep,below=of close] (end) {Конец};
+\draw[flow] (start) -- (pop);
+\draw[flow] (pop) -- (found);
+\draw[flow] (found) -- node[right] {да} (operation);
+\draw[flow] (operation) -- (forward);
+\draw[flow] (forward.west) -- ++(-5mm,0) |- (pop.west);
+\draw[flow] (found) -- node[above] {нет} (close);
+\draw[flow] (close) -- (end);
+\end{tikzpicture}

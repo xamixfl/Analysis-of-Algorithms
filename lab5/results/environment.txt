@@ -1,0 +1,6 @@
+OS: Windows-11-10.0.26200-SP0
+CPU: Intel64 Family 6 Model 140 Stepping 2, GenuineIntel
+Logical CPUs: 4
+Compiler: gcc (Rev2, Built by MSYS2 project) 14.2.0
+Build flags: -std=c11 -O2 -Wall -Wextra -Wpedantic -pthread
+Executable SHA-256: 8b8be64edb639f23ccd9881f2b49a3c3fb14c0c599f53cf09729e0e57e5b71af

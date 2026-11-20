@@ -1,0 +1,3 @@
+﻿PASS: 2 modes, 3 batch types; 84 expected masks and 12 rejected requests.
+PASS: exact independent Otsu reference, FIFO, time ordering, unique outputs,
+      duplicate input, continuation after errors, and output-directory protection.

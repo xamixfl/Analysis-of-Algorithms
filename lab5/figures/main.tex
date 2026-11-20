@@ -1,0 +1,29 @@
+\begin{tikzpicture}[node distance=5mm]
+\node[font=\small\bfseries] (st) at (0,0) {Последовательный режим};
+\node[endstep,below=of st] (s1) {Начало};
+\node[opbox,below=of s1] (s2) {Создать заявки};
+\node[check,below=of s2] (s3) {Есть заявка?};
+\node[opbox,below=of s3] (s4) {Чтение, Оцу и запись\\для очередной заявки};
+\node[opbox,below=8mm of s4] (s5) {Сформировать журнал};
+\node[endstep,below=of s5] (s6) {Конец};
+\draw[flow] (s1) -- (s2);
+\draw[flow] (s2) -- (s3);
+\draw[flow] (s3) -- node[right] {да} (s4);
+\draw[flow] (s4.west) -- ++(-3mm,0) |- (s3.west);
+\draw[flow] (s3.east) -- ++(9mm,0) node[above] {нет} |- (s5.east);
+\draw[flow] (s5) -- (s6);
+
+\node[font=\small\bfseries] (pt) at (8.15,0) {Конвейерный режим};
+\node[endstep,below=of pt] (p1) {Начало};
+\node[opbox,below=of p1] (p2) {Создать заявки, очереди\\и рабочие потоки};
+\node[check,below=of p2] (p3) {Есть заявка?};
+\node[opbox,below=of p3] (p4) {Передать очередную\\заявку в \(Q_1\)};
+\node[opbox,below=8mm of p4] (p5) {Закрыть \(Q_1\), дождаться\\рабочих, сохранить журнал};
+\node[endstep,below=of p5] (p6) {Конец};
+\draw[flow] (p1) -- (p2);
+\draw[flow] (p2) -- (p3);
+\draw[flow] (p3) -- node[right] {да} (p4);
+\draw[flow] (p4.west) -- ++(-3mm,0) |- (p3.west);
+\draw[flow] (p3.east) -- ++(9mm,0) node[above] {нет} |- (p5.east);
+\draw[flow] (p5) -- (p6);
+\end{tikzpicture}
